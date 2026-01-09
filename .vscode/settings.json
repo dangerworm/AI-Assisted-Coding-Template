@@ -7,9 +7,10 @@
   "editor.fontLigatures": true,
   "editor.inlineSuggest.enabled": true,
   "editor.renderWhitespace": "all",
-  "editor.rulers": [100],
+  "editor.rulers": [80],
   "editor.tabSize": 2,
 
+  "files.autoSaveDelay": 0,
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
@@ -45,9 +46,14 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
 
-  // ESLint runs as the linter; avoid letting it “be the formatter”
+  // ESLint runs as the linter; avoid letting it "be the formatter"
   "eslint.format.enable": false,
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
 
   // Fixers on save: leave as "explicit" to avoid surprise mass-changes.
   // If you want auto-fix on save everywhere, change these to true.
@@ -68,19 +74,11 @@
   "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 
   // ---------------------------
-  // Python: use Ruff
+  // Markdown
   // ---------------------------
-  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-
-  // ---------------------------
-  // Python: use Ruff
-  // ---------------------------
-  "python.analysis.typeCheckingMode": "standard",
-
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": false
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
 
   // ---------------------------
@@ -103,7 +101,9 @@
   "[yaml]": { "editor.defaultFormatter": "redhat.vscode-yaml" },
   "[xml]": { "editor.defaultFormatter": "redhat.vscode-xml" },
 
-  "[github-actions-workflow]": { "editor.defaultFormatter": "redhat.vscode-yaml" },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
