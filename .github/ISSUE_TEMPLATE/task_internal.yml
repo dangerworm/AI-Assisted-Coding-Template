@@ -27,7 +27,7 @@ body:
       description: Links and background the implementer needs.
       placeholder: |
         - Relevant docs: docs/planning/*
-        - Related decisions: implementation/ai/decisions.md
+        - Related decisions: context/ai/decisions.md
         - Related issues/PRs:
     validations:
       required: false

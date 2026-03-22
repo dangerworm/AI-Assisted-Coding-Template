@@ -1,16 +1,39 @@
+# Dependencies
+node_modules/
+client/node_modules/
 
-# Local environment / secrets
+# Build outputs
+.venv/
+dist/
+build/
+coverage/
+client/dist/
+
+# Environment files
 .env
 .env.*
 !.env.example
 
-# OS / editor junk
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS / Editor
 .DS_Store
 Thumbs.db
+.vscode/
 .idea/
 
-# Common build artifacts (keep broad and safe)
-dist/
-build/
-.venv/
+# TypeScript / tooling cache
+*.tsbuildinfo
+.eslintcache
+
+# Python cache (if scripts are added later)
 __pycache__/
+*.py[cod]
+
+# AI
+.claude/

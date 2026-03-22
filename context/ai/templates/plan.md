@@ -107,7 +107,7 @@ The AI is likely to struggle with:
 
 Mitigations:
 
-- Maintain a questions log in [questions.md](/implementation/user/questions.md)
+- Maintain a questions log in [questions.md](/context/user/questions.md)
 - Force vertical slices
 - Keep subsystem interfaces stable
 

@@ -53,6 +53,6 @@ body:
     attributes:
       value: |
         If you’re using the AI collaboration workflow, record the decision in:
-        - implementation/ai/decisions.md
+        - context/ai/decisions.md
 
         …and update any relevant planning docs in docs/planning/.

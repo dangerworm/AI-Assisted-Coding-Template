@@ -23,16 +23,14 @@ store planning and context documents as they go, .
 
 1. Fork this repository (or use it as a GitHub template), then clone it.
 2. Write your project constraints and intent in:
-
    - [architecture.md](/docs/planning/architecture.md)
    - [features.md](/docs/planning/features.md)
    - [requirements.md](/docs/planning/requirements.md)
    - [technologies.md](/docs/planning/technologies.md)
 
-3. Treat `implementation` as the working memory for AI-assisted development.
-
-- Humans answer questions in [answers.md](/implementation/user/answers.md).
-- Agents ask questions in [questions.md](/implementation/user/questions.md).
+3. Treat `context` as the working memory for AI-assisted development.
+   - Humans answer questions in [answers.md](/context/user/answers.md).
+   - Agents ask questions in [questions.md](/context/user/questions.md).
 
 4. Put application code in `app`.
 
@@ -82,7 +80,7 @@ material:
 - references (books, letters, example data)
 - anything else you can think of
 
-### `implementation`
+### `context`
 
 The **most important folder**.
 
@@ -93,7 +91,7 @@ while retaining access to everything that came before.
 Right now the only contents are template files, simply so that the AI has some
 idea of what content each file should have and how it should be structured.
 
-For more information, look at [README.md](implementation/README.md).
+For more information, look at [README.md](context/README.md).
 
 ### `scripts`
 
@@ -118,4 +116,4 @@ I've included two sets of scripts I've used in the past as examples.
   - [Requirements](docs/planning/requirements.md)
   - [Technologies](docs/planning/technologies.md)
 - **AI working memory/context setup**
-  - [Implementation workflow](/implementation/README.md)
+  - [Implementation workflow](/context/README.md)

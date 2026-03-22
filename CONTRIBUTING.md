@@ -7,8 +7,8 @@ into a particular stack without a clear reason.
 ## What we welcome
 
 - Fixes to documentation: clarity, spelling/grammar, broken links
-- Improvements to the human <-> AI workflow (AGENTS guidance, implementation
-  folder flow)
+- Improvements to the human <-> AI workflow (AGENTS guidance, context folder
+  flow)
 - Small quality-of-life improvements that are broadly applicable
 
 ## What we generally avoid
@@ -32,7 +32,7 @@ into a particular stack without a clear reason.
 - If you change the workflow (files/paths/structure), update:
   - [README.md](/README.md)
   - [AGENTS.md](/AGENTS.md)
-  - [README.md](/implementation/README.md)
+  - [README.md](/context/README.md)
 
 ## Validation
 
@@ -47,5 +47,5 @@ Contributions should:
 If you’re using this as a starting point for an application:
 
 - Replace the planning docs in `docs/planning` with your real requirements.
-- Treat `implementation` as the AI collaboration workspace.
+- Treat `context` as the AI collaboration workspace.
 - Feel free to delete anything you don’t need (for example, scripts or compose).

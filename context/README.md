@@ -1,4 +1,4 @@
-# The Implementation Folder
+# The `context` Folder
 
 If you're a human, you're welcome to read this file but this isn't your
 responsibility.
@@ -7,7 +7,7 @@ If you're an AI, **pay attention**.
 
 ## To the human
 
-- Let the AI manage its own context in `implementation/ai`
+- Let the AI manage its own context in `context/ai`
 - Check [questions.md](./user/questions.md) when prompted
   - Put your answers in [answers.md](./user/answers.md)
 
@@ -67,7 +67,7 @@ process you should prefix each commit with `Chunk X: [slice name]`.
 
 The files in `ai/templates` should only ever be **read**. They serve solely as
 examples of layout, content, and structure for copies of those files with the
-same name, which should be placed in `implementation/ai`.
+same name, which should be placed in `context/ai`.
 
 #### `changes.md`
 
@@ -105,7 +105,7 @@ always-include context for any AI coding run.
 
 Mere existence of this file indicates that project has started, and it should
 not be edited unless entirely necessary; doing so should be accompanied by an
-associated entry in [changes.md](/implementation/ai/changes.md).
+associated entry in [changes.md](/context/ai/changes.md).
 
 #### `insights.md`
 
@@ -161,7 +161,7 @@ confusion and increase success rate.
 This template is to help you get input from the user, as and when you need it.
 
 A copy should be created whenever necessary and written to
-[questions.md](/implementation/user/questions.md). Questions might be about:
+[questions.md](/context/user/questions.md). Questions might be about:
 
 - decisions necessary to unblock implementation
 - issues causing major rework

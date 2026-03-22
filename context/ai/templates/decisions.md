@@ -3,14 +3,13 @@
 This file records decisions that constrain implementation. Treat entries here as
 binding until explicitly superseded.
 
-When a human answers questions in [answers.md](/implementation/user/answers.md),
-the agent should:
+When a human answers questions in [answers.md](/context/user/answers.md), the
+agent should:
 
 1. Append a decision record here.
 2. Remove the answered question(s) from
-   [questions.md](/implementation/user/questions.md).
-3. Remove the accepted answer(s) from
-   [answers.md](/implementation/user/answers.md).
+   [questions.md](/context/user/questions.md).
+3. Remove the accepted answer(s) from [answers.md](/context/user/answers.md).
 
 ## Decision log
 

@@ -88,6 +88,6 @@ body:
       placeholder: |
         - Constraints (what must not change):
         - Suggested approach:
-        - Links to docs/planning/* or implementation/ai/decisions.md:
+        - Links to docs/planning/* or context/ai/decisions.md:
     validations:
       required: false
