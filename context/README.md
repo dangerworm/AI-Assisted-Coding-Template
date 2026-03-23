@@ -81,6 +81,24 @@ of the provided documentation. For example, you and the human might:
 - spot a need for additional CI/CD actions, workflows, or scripts
 - add a script to test a particular approach and make a decision based on that
 
+#### `decisions.md`
+
+> This file should be seeded **before** work on the first chunk begins, and
+> updated whenever a question is answered or a constraint is confirmed.
+
+Records decisions that constrain implementation. Treat entries as binding until
+explicitly superseded.
+
+**Do not leave this file empty at project start.** Scan existing design
+documents (`docs/planning/*`, schema files, conversation transcripts) and
+extract any decisions that are implicitly already made — database engine, auth
+approach, deployment target, API style, etc. A decision worth recording is any
+constraint that, if violated, would cause significant rework.
+
+Ongoing workflow: when the human answers a question, append a decision record
+here, then remove the question from `user/questions.md` and the answer from
+`user/answers.md`.
+
 #### `chunk-X-progress.md`
 
 > These files are created at the start of work on an individual chunk and
@@ -132,6 +150,25 @@ Each entry should include:
 - **Why it matters**
 - **Suggested action** (if any)
 
+#### `known-issues.md`
+
+> This file only needs to be created when a confirmed bug or accepted tech debt
+> is identified that has no current fix.
+
+A registry of things that are **known to be broken or deficient** and have not
+yet been fixed. This is distinct from `insights.md`:
+
+- `insights.md` — observations and risks that may or may not turn out to be
+  real problems; needs investigation
+- `known-issues.md` — confirmed problems that need a fix, not an investigation
+
+When an insight is confirmed as a real bug or accepted tech debt, move it to
+this file and cross-reference the original `insights.md` entry. When the fix is
+merged, remove the entry and note it in `changes.md`.
+
+Each entry should include severity, area, description, reproduction steps,
+workaround (if any), what the fix requires, and what is blocking it.
+
 #### `plan.md`
 
 > This file is created **once**, minimally edited (e.g. to update chunk status),
@@ -167,10 +204,17 @@ A copy should be created whenever necessary and written to
 - issues causing major rework
 - anything not fully specified in the wider repository
 
+Each question must be tagged with an urgency level:
+
+- **[BLOCKING]** — work cannot proceed until this is answered. Pause relevant
+  implementation and surface it immediately.
+- **[CLARIFYING]** — useful but not urgent. Continue with a documented
+  assumption in `decisions.md` until the human confirms.
+
 Each time the AI discovers that it has a question or questions, it should:
 
-- append a question to [questions.md](./user/questions.md) in a similar format
-  to those in the template
+- append a question (with urgency tag) to [questions.md](./user/questions.md)
+  in a similar format to those in the template
 - create a heading and space for the user to reply in
   [answers.md](./user/answers.md)
 - prompt the human to check the questions file at the end of a response
@@ -185,3 +229,30 @@ will:
 - remove accepted answers from [answers.md](./user/answers.md)
 - remove answered questions from [questions.md](./user/questions.md)
 - reformat/reorder the headings in [questions.md](./user/questions.md)
+
+---
+
+## A note on memory systems
+
+If the AI assistant has an **external memory system** (e.g. files stored outside
+this repository, such as `~/.claude/projects/…`), there is a structural tension
+between that system and this `context/` folder. Both may record similar things —
+project goals, decisions, insights — but from different angles and at different
+times. They can diverge.
+
+The intended boundary is:
+
+- **`context/`** is the authoritative, in-repo memory. It is version-controlled,
+  shared with any collaborator or future AI, and reflects the project's actual
+  state.
+- **External memory** is personal and session-scoped. It may record user
+  preferences, working style, or high-level context that is not worth committing
+  to the repo.
+
+When there is a conflict, **`context/` wins**. If the external memory says one
+thing and the repo says another, read the repo. Treat external memory as a
+starting-point hint, not a source of truth.
+
+To reduce drift: when a significant decision or insight is reached via
+conversation, write it to `context/ai/` immediately. Do not rely on external
+memory to preserve it across sessions.

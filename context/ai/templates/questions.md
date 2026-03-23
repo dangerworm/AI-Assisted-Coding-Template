@@ -5,7 +5,18 @@
 
 ---
 
-## 1. [yyyy-mm-dd]: Identity provider (OIDC)
+## Urgency levels
+
+Each question should be prefixed with one of:
+
+- **[BLOCKING]** — work cannot proceed until this is answered. Raise it
+  immediately and pause the relevant implementation until resolved.
+- **[CLARIFYING]** — useful but not urgent. Work can continue with a reasonable
+  assumption; note the assumption in `decisions.md` until the human confirms.
+
+---
+
+## 1. [yyyy-mm-dd] [BLOCKING]: Identity provider (OIDC)
 
 Describe the identity/authentication approach. Examples:
 
@@ -21,7 +32,7 @@ If applicable, provide values like:
 - Allowed redirect URLs (frontend)
 - Logout behaviour
 
-## 2. [yyyy-mm-dd]: Environments and secrets
+## 2. [yyyy-mm-dd] [CLARIFYING]: Environments and secrets
 
 Decide how you want to run dev:
 
@@ -35,7 +46,7 @@ For dev/staging/prod:
 - Secret management approach
 - Naming conventions (if relevant)
 
-## 3. [yyyy-mm-dd]: Operational database choice
+## 3. [yyyy-mm-dd] [BLOCKING]: Operational database choice
 
 Choose one:
 
