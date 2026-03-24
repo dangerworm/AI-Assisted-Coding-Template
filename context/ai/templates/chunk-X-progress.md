@@ -1,23 +1,21 @@
 # Chunk X Progress: [Chunk Name]
 
-**Status:** IN PROGRESS
+**Status:** IN PROGRESS | BLOCKED | READY FOR REVIEW
 
 **Started:** [YYYY-MM-DD]
 
-**Build Status:** [Not started | In progress | Blocked | Ready for test]
-
 ## Overview
 
-This chunk implements:
+This chunk delivers:
 
-- [Primary capability]
-- [Secondary capability]
+- [Primary outcome]
+- [Secondary outcome]
 - [Supporting or cross-cutting concern]
 
-The goal of this chunk is to deliver [high-level outcome] while preserving all
-system invariants defined in the specification and design documents.
+The goal is to deliver [high-level outcome] while preserving all constraints
+and invariants defined in the planning documents.
 
-## Scope (from specification & design docs)
+## Scope
 
 ### [Capability Area 1]
 
@@ -26,7 +24,7 @@ From requirements.md:
 - [Normative requirement]
 - [Normative requirement]
 
-From design-document.md:
+From architecture.md / design documents:
 
 - [Architectural decision]
 - [Design constraint]
@@ -37,81 +35,40 @@ From requirements.md:
 
 - [Requirement]
 
-From design-document.md:
+From architecture.md / design documents:
 
 - [Decision]
 
-## Domain Model
+## Key Concepts and Design
 
-### New Entities ([N] models)
+New elements introduced in this chunk:
 
-1. [EntityName]
+1. [Element name]
 
-   Purpose: [Why this entity exists]
+   Purpose: [Why this exists]
 
-   Properties:
+   Properties / Attributes:
 
    - [Property] – [Meaning]
-   - [Property] – [Meaning]
 
-   Navigation:
+   Relationships:
 
-   - [Related entities]
+   - [How it connects to other elements]
 
-## Database Schema
-
-Tables:
-
-[TableName]
-
-- [Column] [Type]
-- [Column] [Type]
-
-Indexes:
-
-- [Index purpose]
-
-Constraints:
-
-- [Invariant enforced]
-
-## Repository Layer
-
-Interface: I[Feature]Repository
-
-Methods:
-
-- Create
-- Get by id
-- Update
-
-## Service Layer
-
-Interface: I[Feature]Service
-
-Responsibilities:
-
-- Orchestration
-- Validation
-- Event emission
-
-## API Layer
-
-Queries:
-
-- [QueryName]
-
-Mutations:
-
-- [MutationName]
+> **For software projects:** expand this section into Database Schema,
+> Repository Layer, Service Layer, and API Layer subsections as needed.
+>
+> **For other domains:** add subsections relevant to your work — e.g. a design
+> project might have Constraints, Materials, and Deliverables; a process
+> project might have Inputs, Outputs, Roles, and Handoffs.
 
 ## Exit Criteria
 
 From plan.md:
 
-- [Exit condition]
-- [Exit condition]
-- [Exit condition]
+- [ ] [Exit condition]
+- [ ] [Exit condition]
+- [ ] [Exit condition]
 
 ## Progress Tracking
 
