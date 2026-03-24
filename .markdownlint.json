@@ -1,0 +1,10 @@
+{
+  "MS024": {
+    "no_duplicate_heading": {
+      "siblings_only": true
+    }
+  },
+  "MD029": {
+    "style": "ordered"
+  }
+}

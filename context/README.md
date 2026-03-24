@@ -190,6 +190,28 @@ hallucinated requirements, or architectural erosion.
 This should be a short, and contain a punch list of changes that will reduce
 confusion and increase success rate.
 
+#### `redesign-notes.md`
+
+> This file is created at the start of a REDESIGN mode run and updated
+> throughout the design conversation.
+
+Tracks all modernisation proposals, their priority tags (`[MUST]`, `[SHOULD]`,
+`[COULD]`, `[KEEP]`), and the human's decision on each. Also serves as a
+quick-reference decisions log and a checklist for completing the redesign. When
+the redesign is done, this file remains as a record of why the target
+architecture differs from the original.
+
+#### `discover-phase-progress.md`
+
+> This file is created at the start of a DISCOVER mode run and updated after
+> each phase.
+
+Tracks progress through the six discovery phases (Inventory, Architecture,
+Features, Data Model, Technologies, Requirements). Acts as the AI's working
+notes during a DISCOVER run — equivalent to `chunk-X-progress.md` in BUILD
+mode. Also consolidates all `[UNCERTAIN]` and `[MISSING]` items for human
+review before switching to BUILD mode.
+
 #### `questions.md`
 
 > This file only needs to be created when a question is identified. It is

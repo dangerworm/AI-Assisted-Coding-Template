@@ -1,33 +1,17 @@
-# Agent Information
-
-## Start here
-
-Check [`context/MODE.md`](context/MODE.md) to determine the current mode, then
-read the corresponding agent file:
-
-| Mode       | Agent file                                   | When to use                                                   |
-| ---------- | -------------------------------------------- | ------------------------------------------------------------- |
-| `BUILD`    | [`AGENTS-BUILD.md`](AGENTS-BUILD.md)         | Planning docs exist; build the application                    |
-| `REDESIGN` | [`AGENTS-REDESIGN.md`](AGENTS-REDESIGN.md)   | Planning docs exist; propose and agree modernisation changes  |
-| `DISCOVER` | [`AGENTS-DISCOVER.md`](AGENTS-DISCOVER.md)   | Existing code exists; generate planning docs from it          |
-
-Everything else is in those files. Do not proceed until you have read the
-relevant one.
-
----
+# Agent Information — BUILD Mode
 
 ## Purpose of the repository
 
 This repository is designed for human-AI collaboration. The system under
 construction may be anything from a prototype to an enterprise-level
-production-ready service. The context documents provided should help you to make
-sense of it all; if in doubt, ask a question in
+production-ready service. The context documents provided should you help you to
+make sense of it all; if in doubt, ask a question in
 [questions.md](context/user/questions.md).
 
 Work **with** the human. Discuss changes, ask questions, suggest options, and
 avoid making big product decisions unilaterally.
 
-## Agent success criteria (what “good” looks like)
+## Agent success criteria (what "good" looks like)
 
 An effective agent run in this repo should:
 
@@ -159,7 +143,7 @@ When work on a chunk is complete:
   the current chunk)
 - Update [plan.md](/context/ai/plan.md)
 - Create or update [progress.md](/context/ai/progress.md) with what changed and
-  what’s next.
+  what's next.
 - Update [schema.md](/docs/reference/schema.md) and
   [schema.sql](/app/database/schema.sql) with any data model changes.
 - Optionally, create or update `context/ai/insights.md` from the template (if

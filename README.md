@@ -19,7 +19,20 @@ Structuring a repository like this seems to help them collaborate on bigger
 projects, i.e. with an AGENTS.md file, rich documentation, and somewhere to
 store planning and context documents as they go, .
 
-## Quick start (new project)
+## Quick start
+
+This template supports three modes forming a pipeline. Check
+[`context/MODE.md`](context/MODE.md) and set the one that matches your
+situation.
+
+| Starting point                             | Recommended pipeline              |
+| ------------------------------------------ | --------------------------------- |
+| New project with a specification           | `BUILD`                           |
+| Existing codebase, straightforward rebuild | `DISCOVER` → `BUILD`              |
+| Existing codebase, modernisation needed    | `DISCOVER` → `REDESIGN` → `BUILD` |
+| Existing docs, modernisation needed        | `REDESIGN` → `BUILD`              |
+
+### BUILD — build from a specification
 
 1. Fork this repository (or use it as a GitHub template), then clone it.
 2. Write your project constraints and intent in:
@@ -27,12 +40,37 @@ store planning and context documents as they go, .
    - [features.md](/docs/planning/features.md)
    - [requirements.md](/docs/planning/requirements.md)
    - [technologies.md](/docs/planning/technologies.md)
+3. Set `context/MODE.md` to `BUILD` (the default).
+4. Point your AI agent at the repository. It will read `AGENTS.md` and follow
+   the BUILD workflow.
+5. Put application code in `app`.
 
-3. Treat `context` as the working memory for AI-assisted development.
-   - Humans answer questions in [answers.md](/context/user/answers.md).
-   - Agents ask questions in [questions.md](/context/user/questions.md).
+### DISCOVER — generate documentation from existing code
 
-4. Put application code in `app`.
+1. Fork this repository (or use it as a GitHub template), then clone it.
+2. Copy or clone the existing codebase into `app-original`.
+3. Set `context/MODE.md` to `DISCOVER`.
+4. Point your AI agent at the repository. It will work through six discovery
+   phases and produce populated planning documents in `docs/planning/`.
+5. Review the output, address any flagged gaps, then switch to `REDESIGN` or
+   `BUILD`.
+
+### REDESIGN — modernise before building
+
+1. Ensure planning documents exist in `docs/planning/` (from a DISCOVER run or
+   written by hand).
+2. Set `context/MODE.md` to `REDESIGN`.
+3. Point your AI agent at the repository. It will assess the existing design
+   across several areas (data architecture, frontend, API, infrastructure,
+   security, developer experience) and produce concrete, prioritised proposals.
+4. Review each proposal and indicate whether to accept, reject, or defer it.
+5. The agent will revise the planning documents to reflect the agreed target
+   state, then switch to `BUILD`.
+
+In all modes:
+
+- Agents ask questions in [questions.md](/context/user/questions.md).
+- Humans answer in [answers.md](/context/user/answers.md).
 
 ## Where to find things
 
@@ -61,6 +99,11 @@ This is where your application code should go.
 
 - If you use Docker Compose, start with `app/docker-compose.yml`.
 - If you don't, delete it.
+
+### `app-original`
+
+If you have an existing system for which you want to reverse-engineer the design
+and specification, put it in this folder.
 
 ### `docs`
 
@@ -108,7 +151,11 @@ I've included two sets of scripts I've used in the past as examples.
 ## Where to go next
 
 - **Using this repository**
+  - [Current mode / switching modes](context/MODE.md)
   - [How AI agents use this repo](/AGENTS.md)
+  - [BUILD mode agent guidance](/AGENTS-BUILD.md)
+  - [REDESIGN mode agent guidance](/AGENTS-REDESIGN.md)
+  - [DISCOVER mode agent guidance](/AGENTS-DISCOVER.md)
   - [How to contribute](/CONTRIBUTING.md)
 - **App documentation**
   - [Architecture notes](docs/planning/architecture.md)
