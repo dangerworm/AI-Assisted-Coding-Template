@@ -118,7 +118,14 @@ material:
 - digitised diagrams
 - images (screenshots, sketches, whiteboard photos)
 - references (books, letters, example data)
+- notes from early ideation conversations
 - anything else you can think of
+
+If you are starting from an idea rather than a specification, use
+`docs/reference/` to capture notes as you discuss and develop the idea with
+the AI. These notes give both you and the agent a shared memory to work from
+across sessions, and feed into the planning documents in `docs/planning/` once
+the direction is clear.
 
 ### `context`
 

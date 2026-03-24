@@ -141,8 +141,10 @@ explained below.
 
 ### First-run bootstrap (new project)
 
-If `docs/planning/*` has been populated, start by creating the files below (if
-missing) or populating them (if empty) using the templates in
+#### Starting from existing planning docs
+
+If `docs/planning/*` has been meaningfully populated, create the files below
+(if missing) or populate them (if empty) using the templates in
 `/context/ai/templates` as a guide:
 
 - [context-pack.md](/context/ai/context-pack.md) (stable constraints you will
@@ -150,13 +152,45 @@ missing) or populating them (if empty) using the templates in
 - [plan.md](/context/ai/plan.md) (chunk plan aligned to
   [features.md](/docs/planning/features.md))
 
-If planning docs are empty/unclear, propose minimal drafts in `docs/planning/`
-and ask the human to confirm before writing significant code.
-
-If planning docs enable a reasonably complete understanding of the project but
-there are gaps in the specification where you need additional information, ask
-and record decisions (see
+If there are gaps in the specification where you need additional information,
+ask and record decisions (see
 [Blocked?](#blocked-ask-then-record-decisions-required)).
+
+#### Starting from an idea (no planning docs yet)
+
+If `docs/planning/*` is empty or only lightly filled, do not guess or invent
+requirements. Instead, have a structured conversation with the human first.
+
+Work through these questions in order, one at a time:
+
+1. **Goal** — What are we trying to achieve, and for whom? What does success
+   look like?
+2. **Scope** — What is in scope and what is explicitly out of scope? What are
+   the known constraints (time, budget, team size, strong preferences)?
+3. **Features** — What are the key things it must do? What would be nice to
+   have but is not essential?
+4. **Architecture** — How should it be structured? Are there strong preferences
+   or prior decisions about how it should be organised or delivered — tools,
+   materials, platforms, patterns, or approaches?
+5. **Requirements** — What must it always do? What must it never do? Are there
+   external constraints to satisfy — regulations, standards, budgets, physical
+   limits, compatibility needs, or quality thresholds?
+
+As the conversation progresses:
+
+- Save notes, sketches, rough ideas, and any reference material the human
+  shares to [`docs/reference/`](/docs/reference/). These notes do not need to
+  be polished — their purpose is to preserve the conversation so that both you
+  and the human can pick up exactly where you left off if the ideation spans
+  multiple sessions.
+- Once a topic is clear enough, draft the relevant planning document and ask
+  the human to confirm it before treating it as settled.
+- Do not begin work on chunks until all four planning documents have at least a
+  confirmed first draft.
+
+This conversation may take more than one session. That is fine. The notes in
+`docs/reference/` and the in-progress drafts in `docs/planning/` are your
+shared memory across sessions.
 
 Otherwise, create [chunk-A-progress.md](/context/ai/chunk-A-progress.md).
 
