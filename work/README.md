@@ -1,14 +1,14 @@
-# /app
+# /work
 
-Put application code here.
+This is where project output goes — the thing being built in BUILD mode.
 
-Suggested conventions (optional):
+For software projects, suggested conventions (optional):
 
-- app/backend: API, workers, jobs
-- app/frontend: web UI
-- app/infrastructure: scripts/manifests specific to this app
-- app/terraform: IaC (if you keep it colocated with the app)
+- `work/backend` — API, workers, jobs
+- `work/frontend` — web UI
+- `work/infrastructure` — scripts/manifests specific to this project
+- `work/terraform` — IaC (if you keep it colocated with the project)
 
-If you use Docker Compose locally, start with app/docker-compose.yml.
+If you use Docker Compose locally, start with `work/docker-compose.yml`.
 
 For environment variables, prefer `.env.example` files and keep `.env` local.

@@ -49,8 +49,8 @@ A _completed_ chunk should be:
 
 #### **Stage**
 
-Chunks should be implemented in six stages. Each stage represents work on one of
-the following six components:
+Chunks should be implemented in stages. The default stages for software
+projects are:
 
 - DB: migrations and seed data
 - API: data schema, functionality, validation, and permission checks
@@ -59,9 +59,17 @@ the following six components:
 - Tests: At least one API test + one key domain test
 - Docs: Update implementation notes
 
-Each stage should build successfully so that it can be committed. In most cases
-the user may need to commit for you, but in the case that you can automate this
-process you should prefix each commit with `Chunk X: [slice name]`.
+For non-software projects, define stages appropriate to your domain. For
+example, a design project might use: Research / Concepts / Detailed design /
+Review / Handover. What matters is that each stage has a clear scope, produces
+something independently reviewable, and builds on the previous one without
+breaking it.
+
+Each stage should be complete and reviewable before moving to the next. For
+software projects, each stage should build successfully so that it can be
+committed. In most cases the user may need to commit for you, but in the case
+that you can automate this process you should prefix each commit with
+`Chunk X: [slice name]`.
 
 ### Templates
 
@@ -187,8 +195,16 @@ hallucinated requirements, or architectural erosion.
 
 > This file is updated after each chunk is completed.
 
-This should be a short, and contain a punch list of changes that will reduce
+This should be short and contain a punch list of changes that will reduce
 confusion and increase success rate.
+
+**Why regular updates matter:** AI agents working across long sessions
+experience gradual context drift — attention shifts away from earlier goals and
+constraints as the context fills up. Actively rewriting a progress file at the
+end of each chunk keeps current objectives and recent decisions in the model's
+immediate context, where attention is strongest. This is not just
+record-keeping; it is drift prevention. The same principle applies to
+chunk-progress files updated after each stage.
 
 #### `redesign-notes.md`
 

@@ -11,6 +11,31 @@ make sense of it all; if in doubt, ask a question in
 Work **with** the human. Discuss changes, ask questions, suggest options, and
 avoid making big product decisions unilaterally.
 
+## Operating constraints
+
+### Always
+
+- Read all files in `context/ai/` at the start of every session before writing
+  anything
+- Update chunk progress files after each completed stage
+- Record every answered question as a durable decision in `decisions.md`
+- Discuss significant design choices with the human before implementing them
+
+### Ask first
+
+- Any feature or scope not covered by the planning documents
+- Significant changes to the data schema or overall architecture
+- Anything that would affect work already completed in a previous chunk
+
+### Never
+
+- Make unilateral product or architectural decisions
+- Store secrets, credentials, or API keys in any committed file
+- Write large amounts of output without being able to verify it
+- Skip updating `context/ai/` files after completing work
+
+---
+
 ## Agent success criteria (what "good" looks like)
 
 An effective agent run in this repo should:
@@ -63,7 +88,7 @@ seed files, and documentation, forcing a reconstruction exercise at the start of
 every session. Having it all in one place is a significant advantage.
 
 As such, [schema.md](/docs/reference/schema.md) and
-[schema.sql](/app/database/schema.sql) are probably the most valuable files in
+[schema.sql](/work/database/schema.sql) are probably the most valuable files in
 the entire project. They should be populated as early as possible, and updated
 every time a change is made to the data model. These then form a comprehensive,
 consistent, well-commented view of the data model, especially if `schema.md` is
@@ -145,7 +170,7 @@ When work on a chunk is complete:
 - Create or update [progress.md](/context/ai/progress.md) with what changed and
   what's next.
 - Update [schema.md](/docs/reference/schema.md) and
-  [schema.sql](/app/database/schema.sql) with any data model changes.
+  [schema.sql](/work/database/schema.sql) with any data model changes.
 - Optionally, create or update `context/ai/insights.md` from the template (if
   applicable).
 

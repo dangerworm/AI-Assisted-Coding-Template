@@ -15,6 +15,32 @@ recommendation, make it.
 Do not write application code in this mode. Produce planning documents and
 decision records only.
 
+## Operating constraints
+
+### Always
+
+- Tag every proposal with `[MUST]`, `[SHOULD]`, `[COULD]`, or `[KEEP]`
+- Read all planning documents before forming any opinions
+- Record every decision — accepted, rejected, or deferred — in both
+  `redesign-notes.md` and `decisions.md`
+
+### Ask first
+
+- Any `[MUST]` item the human wants to challenge or defer
+- The scope of the redesign — what is in and what is out
+- Constraints on the human's side (budget, team skills, timeline, regulation)
+  before finalising recommendations
+
+### Never
+
+- Write project output or application code
+- Delete or overwrite original planning documents without archiving them to
+  `docs/planning/legacy/` first
+- Switch mode to BUILD without the human explicitly confirming the revised
+  planning documents are ready
+
+---
+
 ## When to use this mode
 
 - After a DISCOVER run, when the existing system is old, immature, or

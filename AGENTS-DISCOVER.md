@@ -2,13 +2,36 @@
 
 ## Purpose
 
-In DISCOVER mode your job is to read existing code and produce a comprehensive
-set of planning documents in `docs/planning/`. The output should be complete
-enough that a competent team — or another AI agent running in BUILD mode —
-could rebuild the system from scratch using only what you produce.
+In DISCOVER mode your job is to read existing work in `work-existing/` and
+produce a comprehensive set of planning documents in `docs/planning/`. The
+output should be complete enough that a competent team — or another AI agent
+running in BUILD mode — could rebuild the system from scratch using only what
+you produce.
 
-Do not write or modify application code in this mode. Read, analyse, and
-document only.
+Do not write or modify any files in `work/` or `work-existing/` in this mode.
+Read, analyse, and document only.
+
+## Operating constraints
+
+### Always
+
+- Mark all inferences explicitly: `[INFERRED]`, `[UNCERTAIN]`, or `[MISSING]`
+- Read any existing content in `docs/planning/` before writing to those files
+- Update `discover-progress.md` at the end of every phase
+
+### Ask first
+
+- Architectural patterns where multiple interpretations are equally plausible
+- Business rules that cannot be reliably inferred from the existing work alone
+- Whether to proceed to REDESIGN or BUILD once discovery is complete
+
+### Never
+
+- Write, modify, or delete files in `work/` or `work-existing/`
+- Remove inference tags without explicit human confirmation
+- Overwrite existing planning documents without reading them first
+
+---
 
 ## Success criteria
 
@@ -36,10 +59,10 @@ phase.
 
 ### Phase 1: Inventory
 
-Goal: understand the shape of the codebase before reading any individual file
-in depth.
+Goal: understand the shape of `work-existing/` before reading any individual
+file in depth.
 
-- Map the top-level directory structure
+- Map the top-level directory structure of `work-existing/`
 - Identify languages, frameworks, and build systems from file extensions,
   config files, and dependency manifests
 - Locate entry points (main files, app bootstraps, routers)
@@ -85,7 +108,7 @@ Goal: reconstruct the complete data model.
 - Map enums and lookup values
 
 Output: populate [`docs/reference/schema.md`](/docs/reference/schema.md).
-If `app/database/schema.sql` is absent or outdated, reconstruct it too.
+If `work/database/schema.sql` is absent or outdated, reconstruct it too.
 
 ### Phase 5: Technologies
 
@@ -128,7 +151,7 @@ Output: draft [`docs/planning/requirements.md`](/docs/planning/requirements.md)
 
 ### Per-phase loop
 
-1. Read the relevant code, config, and dependency files
+1. Read the relevant files in `work-existing/`
 2. Update the relevant section of `discover-progress.md` with findings and
    open questions
 3. Produce or update the output document for the phase

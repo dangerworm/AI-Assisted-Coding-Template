@@ -79,7 +79,7 @@ seed files, and documentation, forcing a reconstruction exercise at the start of
 every session. Having it all in one place is a significant advantage.
 
 As such, [schema.md](/docs/reference/schema.md) and
-[schema.sql](/app/database/schema.sql) are probably the most valuable files in
+[schema.sql](/work/database/schema.sql) are probably the most valuable files in
 the entire project. They should be populated as early as possible, and updated
 every time a change is made to the data model. These then form a comprehensive,
 consistent, well-commented view of the data model, especially if `schema.md` is
@@ -161,7 +161,7 @@ When work on a chunk is complete:
 - Create or update [progress.md](/context/ai/progress.md) with what changed and
   what’s next.
 - Update [schema.md](/docs/reference/schema.md) and
-  [schema.sql](/app/database/schema.sql) with any data model changes.
+  [schema.sql](/work/database/schema.sql) with any data model changes.
 - Optionally, create or update `context/ai/insights.md` from the template (if
   applicable).
 

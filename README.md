@@ -1,23 +1,18 @@
 # AI Project Template
 
-This template is for anyone developing code in collaboration with AI agents.
-Feel free to fork it and customise it for your own purposes.
+This template is for anyone working on projects in collaboration with AI
+agents. Feel free to fork it and customise it for your own purposes.
 
 ## What this is
 
-I recently started coding with AI agents.
+AI agents are capable collaborators, but their effective context is limited for
+larger, longer-running projects. Without structure, they drift — re-doing work,
+forgetting earlier decisions, and losing sight of the original goals.
 
-- It's quicker
-- It allows me to use (and therefore learn) languages and technologies with
-  which I'm unfamiliar
-- It gives me an insight into their strengths and weaknesses.
-
-My insights so far are that whilst AIs are perfectly capable of creating code,
-their effective context is still limited for larger codebases.
-
-Structuring a repository like this seems to help them collaborate on bigger
-projects, i.e. with an AGENTS.md file, rich documentation, and somewhere to
-store planning and context documents as they go, .
+Structuring a repository like this seems to help them work on bigger projects:
+an AGENTS.md file gives them operating instructions, rich documentation gives
+them context, and a dedicated folder for planning and memory lets them pick up
+exactly where they left off.
 
 ## Quick start
 
@@ -43,12 +38,12 @@ situation.
 3. Set `context/MODE.md` to `BUILD` (the default).
 4. Point your AI agent at the repository. It will read `AGENTS.md` and follow
    the BUILD workflow.
-5. Put application code in `app`.
+5. Put your project output in `work`.
 
 ### DISCOVER — generate documentation from existing code
 
 1. Fork this repository (or use it as a GitHub template), then clone it.
-2. Copy or clone the existing codebase into `app-original`.
+2. Copy or clone the existing codebase into `work-existing`.
 3. Set `context/MODE.md` to `DISCOVER`.
 4. Point your AI agent at the repository. It will work through six discovery
    phases and produce populated planning documents in `docs/planning/`.
@@ -93,14 +88,16 @@ files allow me to configure its behaviour.
 
 For more information, have a look at [.vscode/README.md](.vscode/README.md).
 
-### `app`
+### `work`
 
-This is where your application code should go.
+This is where your project output goes — application code, generated assets,
+design files, or whatever the BUILD mode produces for your domain.
 
-- If you use Docker Compose, start with `app/docker-compose.yml`.
-- If you don't, delete it.
+- If you are building a software project and use Docker Compose, start with
+  `work/docker-compose.yml`.
+- If you don't need it, delete it.
 
-### `app-original`
+### `work-existing`
 
 If you have an existing system for which you want to reverse-engineer the design
 and specification, put it in this folder.
@@ -128,8 +125,8 @@ material:
 The **most important folder**.
 
 This is basically the AI's memory. It serves as a place for the agent to write
-out its context, meaning it only has to focus on small areas of code at a time
-while retaining access to everything that came before.
+out its context, meaning it only has to focus on one area of the project at a
+time while retaining access to everything that came before.
 
 Right now the only contents are template files, simply so that the AI has some
 idea of what content each file should have and how it should be structured.
@@ -157,7 +154,7 @@ I've included two sets of scripts I've used in the past as examples.
   - [REDESIGN mode agent guidance](/AGENTS-REDESIGN.md)
   - [DISCOVER mode agent guidance](/AGENTS-DISCOVER.md)
   - [How to contribute](/CONTRIBUTING.md)
-- **App documentation**
+- **Planning documents**
   - [Architecture notes](docs/planning/architecture.md)
   - [Features](docs/planning/features.md)
   - [Requirements](docs/planning/requirements.md)
