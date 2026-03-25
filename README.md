@@ -17,7 +17,7 @@ exactly where they left off.
 ## Who this is for
 
 This template is intentionally domain-agnostic. It is designed to be useful
-to anyone working on a substantial project with an AI agent — not just software
+to anyone working on a substantial project with an AI agent - not just software
 developers. A researcher documenting a study, an engineer designing a physical
 system, a gardener planning a large garden, an architect proposing a building,
 or an enterprise team rebuilding a business process can all use this template.
@@ -58,7 +58,7 @@ situation.
 1. Fork this repository (or use it as a GitHub template), then clone it.
 2. Copy or clone the existing work into `work-existing`.
 3. Optionally, add any bug reports, user feedback, or known issues to
-   `work-existing/feedback/` — this significantly improves output quality.
+   `work-existing/feedback/` - this significantly improves output quality.
 4. Set `context/MODE.md` to `DISCOVER`.
 5. Point your AI agent at the repository. It will work through seven discovery
    phases, reading every file in depth, and produce populated planning documents

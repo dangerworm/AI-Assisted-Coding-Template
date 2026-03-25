@@ -4,8 +4,8 @@
 
 In DISCOVER mode your job is to read existing work in `work-existing/` and
 produce a comprehensive set of planning documents in `docs/planning/`. The
-output must be complete enough that a competent team — or another AI agent
-running in BUILD mode — could rebuild the system from scratch using only what
+output must be complete enough that a competent team - or another AI agent
+running in BUILD mode - could rebuild the system from scratch using only what
 you produce, with no access to `work-existing/`.
 
 **Thoroughness is the primary obligation.** Skimming or sampling is not
@@ -23,7 +23,7 @@ and document only.
 - Mark all inferences explicitly: `[INFERRED]`, `[UNCERTAIN]`, or `[MISSING]`
 - Read any existing content in `docs/planning/` before writing to those files
 - Update [`discover-progress.md`](/context/ai/discover-progress.md) after each
-  batch of files within a phase — not just at the end of the phase
+  batch of files within a phase - not just at the end of the phase
 - Read [`discover-progress.md`](/context/ai/discover-progress.md) at the start
   of every session to resume from exactly where the previous session left off
 - Read `work-existing/feedback/` before starting Phase 1 (see
@@ -40,7 +40,7 @@ and document only.
 - Write, modify, or delete files in `work/` or `work-existing/`
 - Remove inference tags without explicit human confirmation
 - Overwrite existing planning documents without reading them first
-- Sample or skim when a complete read is feasible — coverage is non-negotiable
+- Sample or skim when a complete read is feasible - coverage is non-negotiable
 
 ---
 
@@ -49,24 +49,24 @@ and document only.
 Discovery is complete when **all** of the following are true:
 
 - Every file in the Phase 1 master checklist is ticked off as read
-- All output documents contain implementation-level detail — not summaries
+- All output documents contain implementation-level detail - not summaries
 - Zero `[UNCERTAIN]` or `[MISSING]` items remain unescalated
 - Behaviour files exist for every functional area in `docs/behaviour/`
 - The human has confirmed they are satisfied with coverage
 
 A successful discover run produces:
 
-- [`docs/planning/architecture.md`](/docs/planning/architecture.md) — complete,
+- [`docs/planning/architecture.md`](/docs/planning/architecture.md) - complete,
   accurate architecture
-- [`docs/planning/features.md`](/docs/planning/features.md) — every feature
+- [`docs/planning/features.md`](/docs/planning/features.md) - every feature
   documented at implementation level
-- [`docs/planning/requirements.md`](/docs/planning/requirements.md) — every
+- [`docs/planning/requirements.md`](/docs/planning/requirements.md) - every
   business rule, invariant, and constraint extracted from code and feedback
-- [`docs/planning/technologies.md`](/docs/planning/technologies.md) — complete
+- [`docs/planning/technologies.md`](/docs/planning/technologies.md) - complete
   technology inventory with versions
-- [`docs/reference/schema.md`](/docs/reference/schema.md) — complete data model
+- [`docs/reference/schema.md`](/docs/reference/schema.md) - complete data model
   (if a data model is present)
-- [`docs/behaviour/`](/docs/behaviour/) — actual-layer behaviour files for every
+- [`docs/behaviour/`](/docs/behaviour/) - actual-layer behaviour files for every
   functional area
 - Reference files as needed, for example:
   - `docs/reference/api-endpoints.md`
@@ -97,7 +97,7 @@ If `work-existing/feedback/` is empty or absent, prompt the human:
 
 > The `work-existing/feedback/` directory is empty. Do you have any bug reports,
 > complaint logs, user satisfaction data, or stakeholder feedback you can add
-> there? This data significantly improves DISCOVER output — known issues may
+> there? This data significantly improves DISCOVER output - known issues may
 > otherwise go undocumented. You can continue without it, but adding feedback
 > data before Phase 6 is strongly recommended.
 
@@ -105,7 +105,7 @@ If `work-existing/feedback/` is empty or absent, prompt the human:
 
 The existing work may be a software project, a set of design documents, a
 collection of process descriptions, physical product documentation, or something
-else entirely. Identify the domain early — it affects how behaviour files are
+else entirely. Identify the domain early - it affects how behaviour files are
 produced in Phase 7 (see
 [Phase 7](#phase-7-behaviour-documentation--completeness-audit)).
 
@@ -114,7 +114,7 @@ produced in Phase 7 (see
 ## Discovery phases
 
 Work through seven phases in order. Each phase (except Phase 1) must be
-exhaustive — every relevant file must be read, not sampled. Use the master file
+exhaustive - every relevant file must be read, not sampled. Use the master file
 checklist from Phase 1 to track what has been read. Update
 [`discover-progress.md`](/context/ai/discover-progress.md) after every batch of
 files so that a session that ends mid-phase can resume at the correct point.
@@ -150,7 +150,7 @@ Goal: understand exactly how the system is structured and how its parts connect.
 - Read every routing file, middleware definition, and cross-cutting
   configuration
 - Identify the architectural pattern (MVC, layered, hexagonal, microservices,
-  event-driven, etc.) from evidence in the code — not from documentation alone
+  event-driven, etc.) from evidence in the code - not from documentation alone
 - Map every component boundary and inter-component dependency
 - Read every deployment file: docker-compose, Kubernetes manifests, CI config,
   infrastructure-as-code, environment configuration
@@ -164,12 +164,12 @@ Output: draft [`docs/planning/architecture.md`](/docs/planning/architecture.md)
 Goal: document every feature and user-facing capability at implementation level.
 
 - Read **every** route handler, API endpoint definition, UI screen or page, CLI
-  command, and scheduled job — document each one individually, not just as a
+  command, and scheduled job - document each one individually, not just as a
   group
 - Identify user roles and map every permission and capability per role
 - Document every multi-step workflow or process in full detail
 - If existing tests exist (unit, integration, E2E, Gherkin `.feature` files,
-  Playwright scripts, or equivalent), read them — they reveal what the system
+  Playwright scripts, or equivalent), read them - they reveal what the system
   was intended to do. Collect or convert these into stated-layer behaviour files
   in `docs/behaviour/` (see [Behaviour files](#behaviour-files))
 
@@ -196,7 +196,7 @@ Goal: produce a complete and versioned technology inventory.
 - Read lock files, runtime configs, CI specs, and infrastructure definitions
 - List every language with its version
 - List every framework and key library with its version
-- List every external service and integration (connection details only — never
+- List every external service and integration (connection details only - never
   secrets)
 - List every infrastructure dependency: databases, queues, caches, object
   storage
@@ -215,9 +215,9 @@ from the existing work and from the feedback directory.
 - Identify non-functional requirements from configuration (timeouts, retries,
   rate limits, size limits) and from infrastructure choices
 - Read `work-existing/feedback/` and document every known issue, complaint, or
-  gap — cross-reference each item against the relevant feature or requirement
+  gap - cross-reference each item against the relevant feature or requirement
   and flag it explicitly
-- Note system invariants — things the system always or never does
+- Note system invariants - things the system always or never does
 - Flag areas that are unclear, inconsistent, or contradicted by feedback data
 
 Output: draft [`docs/planning/requirements.md`](/docs/planning/requirements.md)
@@ -238,8 +238,8 @@ actual-layer behaviour file in `docs/behaviour/`:
 - **Other domains**: `.md` files using Given/When/Then format
 
 Where stated-layer files already exist (from Phase 3), compare them against the
-actual-layer output. Flag any divergence — things the system was intended to do
-but does not, or things it does but was not documented as doing — in
+actual-layer output. Flag any divergence - things the system was intended to do
+but does not, or things it does but was not documented as doing - in
 [`discover-progress.md`](/context/ai/discover-progress.md).
 
 Do not produce required-layer behaviour files. That is the responsibility of
@@ -300,7 +300,7 @@ throughout.
 
 ### First run
 
-1. Read any existing content in `docs/planning/` and `docs/reference/` — do not
+1. Read any existing content in `docs/planning/` and `docs/reference/` - do not
    overwrite anything without reading it first.
 2. Read `work-existing/feedback/` if populated (see
    [Before you start](#before-you-start)).
@@ -324,7 +324,7 @@ Work in batches small enough to complete within one session:
 
 1. Identify the next batch of files from the phase's checklist in
    `discover-progress.md`
-2. Read each file fully — do not skim
+2. Read each file fully - do not skim
 3. Update the relevant output document
 4. Tick off each file in `discover-progress.md`
 5. Mark inferences clearly (see [Marking inferences](#marking-inferences))
@@ -337,10 +337,10 @@ Work in batches small enough to complete within one session:
 Not everything can be read directly from the existing work. Where you are
 inferring intent rather than stating a confirmed fact, mark it:
 
-- `[INFERRED]` — a reasonable inference; probably correct but should be verified
-- `[UNCERTAIN]` — low confidence; the human should confirm before relying on
+- `[INFERRED]` - a reasonable inference; probably correct but should be verified
+- `[UNCERTAIN]` - low confidence; the human should confirm before relying on
   this
-- `[MISSING]` — information not present and not inferable; the human must supply
+- `[MISSING]` - information not present and not inferable; the human must supply
   it
 
 Do not remove these tags from output documents. The human clears them as they
@@ -352,7 +352,7 @@ When Phase 7 is complete:
 
 1. Ensure all `[UNCERTAIN]` and `[MISSING]` items are either resolved or
    consolidated in the Gaps section of `discover-progress.md`
-2. Prompt the human to review the generated docs — especially flagged items and
+2. Prompt the human to review the generated docs - especially flagged items and
    behaviour file divergences
 3. Ask whether to proceed to REDESIGN or BUILD
 
@@ -382,6 +382,6 @@ If answers don't exist, remind the user you need more information.
 
 ## Orientation
 
-Do not create README files during discovery — documenting their absence in
+Do not create README files during discovery - documenting their absence in
 `discover-progress.md` is sufficient. If a directory has no README and its
 purpose is unclear, note it as a gap.

@@ -180,7 +180,7 @@ Read the existing planning documents before forming any opinions:
 - [`docs/reference/schema.md`](/docs/reference/schema.md)
 - [`context/ai/discover-progress.md`](/context/ai/discover-progress.md) (if a
   DISCOVER run was completed)
-- [`docs/behaviour/`](/docs/behaviour/) — read any `actual` and `stated` layer
+- [`docs/behaviour/`](/docs/behaviour/) - read any `actual` and `stated` layer
   files as context. These are **not hard requirements** in REDESIGN: the goal is
   to decide what the system *should* do, which may differ significantly from
   what it currently does. Note divergences between stated and actual files as

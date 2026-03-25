@@ -3,7 +3,7 @@
 Put qualitative data about the existing system here before running DISCOVER mode.
 
 This directory is for information that lives **outside** the existing work itself
-— things the code cannot tell you on its own:
+ -  things the code cannot tell you on its own:
 
 - Bug reports and issue logs
 - User complaints or support tickets
@@ -17,7 +17,7 @@ This directory is for information that lives **outside** the existing work itsel
 
 Code tells you what a system does. Feedback tells you what it *fails* to do.
 Both are essential for accurate discovery. Without this data, known problems
-may go undocumented — and a rebuild that repeats the same mistakes is worse
+may go undocumented - and a rebuild that repeats the same mistakes is worse
 than no rebuild at all.
 
 ## Format

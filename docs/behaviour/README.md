@@ -1,6 +1,6 @@
 # /docs/behaviour
 
-This directory contains behaviour files — descriptions of what the system does
+This directory contains behaviour files - descriptions of what the system does
 or must do, written in a structured scenario format.
 
 ## Layers

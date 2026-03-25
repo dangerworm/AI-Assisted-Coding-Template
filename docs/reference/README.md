@@ -5,7 +5,7 @@ Supporting and reference material for the project.
 This folder is not authoritative - it informs the planning documents in
 `docs/planning/` rather than replacing them. Use it for:
 
-- **Data models and schemas** ([`schema.md`](/docs/reference/schema.md) — a
+- **Data models and schemas** ([`schema.md`](/docs/reference/schema.md) - a
   technology-agnostic description of entities, relationships, and constraints)
 - **Ideation notes** - raw notes from early conversations about what to build,
   captured here so that both you and the AI can resume across sessions

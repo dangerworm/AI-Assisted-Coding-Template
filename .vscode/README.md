@@ -22,7 +22,7 @@ priority is:
 
 - Remote / Profile user settings (if applicable)
 
-  - If you’re using a Remote (WSL, SSH, container) or a Settings Profile, those
+  - If you're using a Remote (WSL, SSH, container) or a Settings Profile, those
     user settings override your local user settings for that context only.
 
 - Workspace settings stored in `.vscode/settings.json` in the repository

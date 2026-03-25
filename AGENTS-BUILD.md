@@ -88,10 +88,10 @@ If [`docs/behaviour/`](/docs/behaviour/) contains files, read them before
 building any feature they describe:
 
 - `required` layer files (`.required.feature` or `.required.md`) are **hard
-  requirements** — implement exactly what they specify. If you believe a
+  requirements** - implement exactly what they specify. If you believe a
   requirement is ambiguous or unimplementable, ask before proceeding.
 - `actual` layer files (`.actual.feature` or `.actual.md`) are reference only
-  — they describe what a previous system did, which may or may not match the
+  - they describe what a previous system did, which may or may not match the
   required behaviour. Do not treat them as authoritative.
 - `stated` layer files can be ignored during BUILD; they served their purpose
   in DISCOVER and REDESIGN.

@@ -6,7 +6,7 @@
 
 **Codebase:** [Name or path of the system being analysed]
 
-**Domain:** [Software / Design / Process / Other — determines behaviour file format]
+**Domain:** [Software / Design / Process / Other - determines behaviour file format]
 
 ---
 
@@ -28,7 +28,7 @@
 
 > Populated before Phase 1 if `work-existing/feedback/` contains data.
 
-[Summary of known issues, complaints, or user feedback — or note that directory
+[Summary of known issues, complaints, or user feedback - or note that directory
 was empty]
 
 ---
@@ -102,7 +102,7 @@ Add a `[x]` when a file has been read and its substance documented.
 
 **Status:** Not started
 
-**Files to read this phase:** [list from master checklist — routing, middleware,
+**Files to read this phase:** [list from master checklist - routing, middleware,
 deployment, config, cross-cutting concerns]
 
 **Progress:** 0 / [N] files read
@@ -137,7 +137,7 @@ deployment, config, cross-cutting concerns]
 
 **Status:** Not started
 
-**Files to read this phase:** [list from master checklist — route handlers, API
+**Files to read this phase:** [list from master checklist - route handlers, API
 endpoints, UI pages, CLI commands, existing tests/specs]
 
 **Progress:** 0 / [N] files read
@@ -148,7 +148,7 @@ endpoints, UI pages, CLI commands, existing tests/specs]
 
 ### User Roles
 
-[What each role can do — every permission mapped]
+[What each role can do - every permission mapped]
 
 ### Notable Workflows
 
@@ -170,7 +170,7 @@ endpoints, UI pages, CLI commands, existing tests/specs]
 
 **Status:** Not started
 
-**Files to read this phase:** [list from master checklist — schema files,
+**Files to read this phase:** [list from master checklist - schema files,
 migrations, ORM models, seed data]
 
 **Progress:** 0 / [N] files read
@@ -203,7 +203,7 @@ migrations, ORM models, seed data]
 
 **Status:** Not started
 
-**Files to read this phase:** [list from master checklist — lock files, CI
+**Files to read this phase:** [list from master checklist - lock files, CI
 config, runtime config, infrastructure definitions]
 
 **Progress:** 0 / [N] files read
@@ -218,7 +218,7 @@ config, runtime config, infrastructure definitions]
 
 ### External Services
 
-[APIs, SaaS tools, cloud services — connection details only, no secrets]
+[APIs, SaaS tools, cloud services - connection details only, no secrets]
 
 ### Infrastructure
 
@@ -238,7 +238,7 @@ config, runtime config, infrastructure definitions]
 
 **Status:** Not started
 
-**Files to read this phase:** [list from master checklist — services, domain
+**Files to read this phase:** [list from master checklist - services, domain
 objects, validators, business logic, all test files]
 
 **Progress:** 0 / [N] files read
