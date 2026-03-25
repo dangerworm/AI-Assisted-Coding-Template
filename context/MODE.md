@@ -4,18 +4,18 @@
 
 ## Available modes
 
-| Mode       | Description                                                                                       | Agent file                                  |
-| ---------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| `BUILD`    | Start from planning documents in `docs/planning/` and build project output in `work/`             | [`AGENTS-BUILD.md`](/AGENTS-BUILD.md)       |
-| `REDESIGN` | Review existing planning documents, propose modernisation changes, revise docs for BUILD          | [`AGENTS-REDESIGN.md`](/AGENTS-REDESIGN.md) |
-| `DISCOVER` | Analyse existing work in `work-existing/` and generate planning documents in `docs/planning/`      | [`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md) |
+| Mode       | Description                                                                                   | Agent file                                  |
+| ---------- | --------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| `BUILD`    | Start from planning documents in `docs/planning/` and build project output in `work/`         | [`AGENTS-BUILD.md`](/AGENTS-BUILD.md)       |
+| `REDESIGN` | Review existing planning documents, propose modernisation changes, revise docs for BUILD      | [`AGENTS-REDESIGN.md`](/AGENTS-REDESIGN.md) |
+| `DISCOVER` | Analyse existing work in `work-existing/` and generate planning documents in `docs/planning/` | [`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md) |
 
 ## Typical pipelines
 
 - **New project:** `BUILD`
-- **Rebuild existing system:** `DISCOVER` → `BUILD`
-- **Rebuild with modernisation:** `DISCOVER` → `REDESIGN` → `BUILD`
-- **Modernise before building from existing docs:** `REDESIGN` → `BUILD`
+- **Rebuild existing system:** `DISCOVER` -> `BUILD`
+- **Rebuild with modernisation:** `DISCOVER` -> `REDESIGN` -> `BUILD`
+- **Modernise before building from existing docs:** `REDESIGN` -> `BUILD`
 
 ## Switching modes
 

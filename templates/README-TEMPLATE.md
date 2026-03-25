@@ -23,7 +23,7 @@ Answer: Why does this exist? If someone only reads this section, they should not
 be confused.
 
 - What problem it solves
-- Who it’s for
+- Who it's for
 - What it explicitly does not try to do
 
 ## What it does at a high level

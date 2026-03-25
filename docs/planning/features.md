@@ -17,5 +17,5 @@ List features as user-visible outcomes. Prefer small, shippable slices.
 ## Definitions
 
 - **Feature**: user-visible capability.
-- **Slice**: a shippable end-to-end increment (DB/API/UI/tests/docs as
-  applicable).
+- **Slice**: a shippable end-to-end increment covering all relevant stages
+  for your domain (e.g. DB/API/UI/tests/docs for software projects).

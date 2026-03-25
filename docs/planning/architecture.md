@@ -1,6 +1,11 @@
 # Architecture
 
-This should be the source of truth for how the system fits together.
+This should be the source of truth for how the project fits together.
+
+> The sections below use software terminology as a starting point. Adapt
+> headings to suit your domain - a garden project might have Zones, Conditions,
+> and Planting Strategy; a process project might have Stages, Roles, and
+> Handoffs.
 
 ## System overview
 

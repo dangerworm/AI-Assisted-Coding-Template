@@ -6,7 +6,7 @@ When you fork this repository, the three mode files
 [`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md)) contain generic guidance that
 works for most projects out of the box.
 
-For best results, add project-specific context to the relevant mode file —
+For best results, add project-specific context to the relevant mode file  - 
 particularly `AGENTS-BUILD.md`, which is where the agent will spend most of
 its time. `AGENTS.md` itself should remain a short router; do not add project
 detail there.
@@ -38,7 +38,7 @@ Examples:
 
 ### Conventions that actually matter
 
-Not every style rule — only the ones you would push back on in a review.
+Not every style rule - only the ones you would push back on in a review.
 
 Examples:
 

@@ -5,6 +5,6 @@
     }
   },
   "MD029": {
-    "style": "ordered"
+    "style": "one_or_ordered"
   }
 }

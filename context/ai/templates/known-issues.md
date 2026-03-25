@@ -2,7 +2,7 @@
 
 A registry of confirmed bugs and tech debt that have no current fix. Unlike
 `insights.md` (which records observations and risks that may need
-investigation), entries here are already understood — the problem is known, the
+investigation), entries here are already understood - the problem is known, the
 fix is not yet done or not yet prioritised.
 
 ## When to use this file vs `insights.md`
@@ -19,7 +19,7 @@ When an insight graduates to a confirmed issue, move it here and note it in
 
 ## Issue log
 
-### [YYYY-MM-DD] — [Short title]
+### [YYYY-MM-DD] - [Short title]
 
 - **Severity:** Critical / High / Medium / Low
 - **Area:** Which part of the system is affected
@@ -27,7 +27,7 @@ When an insight graduates to a confirmed issue, move it here and note it in
 - **Reproduction:** Steps or conditions that trigger it (if applicable)
 - **Workaround:** Any interim mitigation in place (or "None")
 - **Fix required:** What needs to change to resolve it
-- **Blocked by:** Any dependency that prevents fixing it now (or "Nothing —
+- **Blocked by:** Any dependency that prevents fixing it now (or "Nothing  - 
   deprioritised")
 - **References:** Links to related issues, PRs, or `insights.md` entries
 
@@ -35,9 +35,9 @@ When an insight graduates to a confirmed issue, move it here and note it in
 
 ## Guidance
 
-- Keep entries here until the fix is merged and verified — then remove them
+- Keep entries here until the fix is merged and verified - then remove them
 - If the issue is fixed, add a one-line note to `changes.md` and delete the
   entry
-- Do not use this file to track speculative problems — that is what
+- Do not use this file to track speculative problems - that is what
   `insights.md` is for
 - Severity is about impact to users or data integrity, not implementation effort

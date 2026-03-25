@@ -9,9 +9,9 @@
 
 Each question should be prefixed with one of:
 
-- **[BLOCKING]** — work cannot proceed until this is answered. Raise it
+- **[BLOCKING]** - work cannot proceed until this is answered. Raise it
   immediately and pause the relevant implementation until resolved.
-- **[CLARIFYING]** — useful but not urgent. Work can continue with a reasonable
+- **[CLARIFYING]** - useful but not urgent. Work can continue with a reasonable
   assumption; note the assumption in `decisions.md` until the human confirms.
 
 ---

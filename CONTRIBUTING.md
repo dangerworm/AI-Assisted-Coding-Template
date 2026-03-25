@@ -20,8 +20,8 @@ into a particular stack without a clear reason.
 ## How to propose changes
 
 1. Open an issue (or start a discussion) describing:
-   - What problem you’re trying to solve
-   - Who it helps (humans, agents, or both)>
+   - What problem you're trying to solve
+   - Who it helps (humans, agents, or both)
    - The smallest change that would solve it
 2. Submit a PR.
 
@@ -32,7 +32,9 @@ into a particular stack without a clear reason.
 - If you change the workflow (files/paths/structure), update:
   - [README.md](/README.md)
   - [AGENTS.md](/AGENTS.md)
-  - [README.md](/context/README.md)
+  - [AGENTS-BUILD.md](/AGENTS-BUILD.md), [AGENTS-DISCOVER.md](/AGENTS-DISCOVER.md),
+    [AGENTS-REDESIGN.md](/AGENTS-REDESIGN.md) as appropriate
+  - [context/README.md](/context/README.md)
 
 ## Validation
 
@@ -44,8 +46,8 @@ Contributions should:
 
 ## Notes for people forking this repo
 
-If you’re using this as a starting point for an application:
-
-- Replace the planning docs in `docs/planning` with your real requirements.
-- Treat `context` as the AI collaboration workspace.
-- Feel free to delete anything you don’t need (for example, scripts or compose).
+- Set the mode in `context/MODE.md` to match your starting point.
+- Replace the planning docs in `docs/planning/` with your real content.
+- Treat `context/` as the AI collaboration workspace.
+- Feel free to delete anything you don't need (for example, scripts or
+  Docker Compose files).

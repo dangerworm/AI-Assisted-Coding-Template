@@ -2,7 +2,7 @@
 
 ## Log
 
-### [YYYY-MM-DD] — [Short context label 1]
+### [YYYY-MM-DD] - [Short context label 1]
 
 **Context:**
 
@@ -20,7 +20,7 @@ Human decision needed / defer / investigate / document
 
 > Where a human decision is needed, remember to update `../../user/questions.md`
 
-### [YYYY-MM-DD] — [Short context label 2]
+### [YYYY-MM-DD] - [Short context label 2]
 
 **Context:**
 

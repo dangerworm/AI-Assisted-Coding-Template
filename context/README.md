@@ -99,7 +99,7 @@ explicitly superseded.
 
 **Do not leave this file empty at project start.** Scan existing design
 documents (`docs/planning/*`, schema files, conversation transcripts) and
-extract any decisions that are implicitly already made — database engine, auth
+extract any decisions that are implicitly already made - database engine, auth
 approach, deployment target, API style, etc. A decision worth recording is any
 constraint that, if violated, would cause significant rework.
 
@@ -166,9 +166,9 @@ Each entry should include:
 A registry of things that are **known to be broken or deficient** and have not
 yet been fixed. This is distinct from `insights.md`:
 
-- `insights.md` — observations and risks that may or may not turn out to be
+- `insights.md` - observations and risks that may or may not turn out to be
   real problems; needs investigation
-- `known-issues.md` — confirmed problems that need a fix, not an investigation
+- `known-issues.md` - confirmed problems that need a fix, not an investigation
 
 When an insight is confirmed as a real bug or accepted tech debt, move it to
 this file and cross-reference the original `insights.md` entry. When the fix is
@@ -199,7 +199,7 @@ This should be short and contain a punch list of changes that will reduce
 confusion and increase success rate.
 
 **Why regular updates matter:** AI agents working across long sessions
-experience gradual context drift — attention shifts away from earlier goals and
+experience gradual context drift - attention shifts away from earlier goals and
 constraints as the context fills up. Actively rewriting a progress file at the
 end of each chunk keeps current objectives and recent decisions in the model's
 immediate context, where attention is strongest. This is not just
@@ -224,7 +224,7 @@ architecture differs from the original.
 
 Tracks progress through the six discovery phases (Inventory, Architecture,
 Features, Data Model, Technologies, Requirements). Acts as the AI's working
-notes during a DISCOVER run — equivalent to `chunk-X-progress.md` in BUILD
+notes during a DISCOVER run - equivalent to `chunk-X-progress.md` in BUILD
 mode. Also consolidates all `[UNCERTAIN]` and `[MISSING]` items for human
 review before switching to BUILD mode.
 
@@ -244,9 +244,9 @@ A copy should be created whenever necessary and written to
 
 Each question must be tagged with an urgency level:
 
-- **[BLOCKING]** — work cannot proceed until this is answered. Pause relevant
+- **[BLOCKING]** - work cannot proceed until this is answered. Pause relevant
   implementation and surface it immediately.
-- **[CLARIFYING]** — useful but not urgent. Continue with a documented
+- **[CLARIFYING]** - useful but not urgent. Continue with a documented
   assumption in `decisions.md` until the human confirms.
 
 Each time the AI discovers that it has a question or questions, it should:
@@ -273,9 +273,9 @@ will:
 ## A note on memory systems
 
 If the AI assistant has an **external memory system** (e.g. files stored outside
-this repository, such as `~/.claude/projects/…`), there is a structural tension
-between that system and this `context/` folder. Both may record similar things —
-project goals, decisions, insights — but from different angles and at different
+this repository, such as `~/.claude/projects/...`), there is a structural tension
+between that system and this `context/` folder. Both may record similar things  - 
+project goals, decisions, insights - but from different angles and at different
 times. They can diverge.
 
 The intended boundary is:

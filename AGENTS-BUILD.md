@@ -1,4 +1,4 @@
-# Agent Information — BUILD Mode
+# Agent Information - BUILD Mode
 
 ## Purpose of the repository
 
@@ -49,8 +49,8 @@ An effective agent run in this repo should:
 
 ### Conversational design
 
-Where new ideas occur, prefer a pattern of "human has an idea → we discuss
-design → I implement". This allows you to take an unspecified additional
+Where new ideas occur, prefer a pattern of "human has an idea -> we discuss
+design -> I implement". This allows you to take an unspecified additional
 feature, align on schema, settle questions about where data should live, and
 then implement the full stack in one session. Having that design conversation
 before writing code prevents rework loops.
@@ -94,7 +94,7 @@ every time a change is made to the data model. These then form a comprehensive,
 consistent, well-commented view of the data model, especially if `schema.md` is
 idempotent (as it should be). `schema.md` is important to the user as it gives a
 complete visual model of the data, and `schema.sql` is as important to you (if
-not more so) since reading it once gives a complete mental model of the data —
+not more so) since reading it once gives a complete mental model of the data  - 
 every table, every relationship, every constraint. Backend handlers should
 follow directly from the schema (same field names, same structure) so that an
 understanding of the schema enables you to make backend changes with very little
@@ -108,7 +108,7 @@ files. You should also add a link to any API reference files in
 
 ## File size as a source of cognitive overhead
 
-Every file you read consumes part of your working context — a finite budget that
+Every file you read consumes part of your working context - a finite budget that
 refreshes only when a conversation ends. If you spend a lot of that budget on
 orientation, it has less left for the actual work.
 
@@ -163,24 +163,24 @@ requirements. Instead, have a structured conversation with the human first.
 
 Work through these questions in order, one at a time:
 
-1. **Goal** — What are we trying to achieve, and for whom? What does success
+1. **Goal** - What are we trying to achieve, and for whom? What does success
    look like?
-2. **Scope** — What is in scope and what is explicitly out of scope? What are
+2. **Scope** - What is in scope and what is explicitly out of scope? What are
    the known constraints (time, budget, team size, strong preferences)?
-3. **Features** — What are the key things it must do? What would be nice to
+3. **Features** - What are the key things it must do? What would be nice to
    have but is not essential?
-4. **Architecture** — How should it be structured? Are there strong preferences
-   or prior decisions about how it should be organised or delivered — tools,
+4. **Architecture** - How should it be structured? Are there strong preferences
+   or prior decisions about how it should be organised or delivered - tools,
    materials, platforms, patterns, or approaches?
-5. **Requirements** — What must it always do? What must it never do? Are there
-   external constraints to satisfy — regulations, standards, budgets, physical
+5. **Requirements** - What must it always do? What must it never do? Are there
+   external constraints to satisfy - regulations, standards, budgets, physical
    limits, compatibility needs, or quality thresholds?
 
 As the conversation progresses:
 
 - Save notes, sketches, rough ideas, and any reference material the human
   shares to [`docs/reference/`](/docs/reference/). These notes do not need to
-  be polished — their purpose is to preserve the conversation so that both you
+  be polished - their purpose is to preserve the conversation so that both you
   and the human can pick up exactly where you left off if the ideation spans
   multiple sessions.
 - Once a topic is clear enough, draft the relevant planning document and ask

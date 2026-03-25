@@ -146,7 +146,7 @@ This system involves complexity in areas such as:
 **Risk:** [PLACEHOLDER: Major technical or organisational risk] ->
 **Mitigation:** [PLACEHOLDER: How this risk is managed]
 
-**Risk:** [PLACEHOLDER] → **Mitigation:** [PLACEHOLDER]
+**Risk:** [PLACEHOLDER] -> **Mitigation:** [PLACEHOLDER]
 
 ### Recommended Implementation Strategy
 

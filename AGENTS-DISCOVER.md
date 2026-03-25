@@ -1,11 +1,11 @@
-# Agent Information — DISCOVER Mode
+# Agent Information - DISCOVER Mode
 
 ## Purpose
 
 In DISCOVER mode your job is to read existing work in `work-existing/` and
 produce a comprehensive set of planning documents in `docs/planning/`. The
-output should be complete enough that a competent team — or another AI agent
-running in BUILD mode — could rebuild the system from scratch using only what
+output should be complete enough that a competent team - or another AI agent
+running in BUILD mode - could rebuild the system from scratch using only what
 you produce.
 
 Do not write or modify any files in `work/` or `work-existing/` in this mode.
@@ -130,7 +130,7 @@ Goal: infer the non-obvious constraints and rules embedded in the code.
 - Extract business rules from validation logic, domain services, and tests
 - Identify non-functional requirements (performance assumptions, scale targets,
   SLAs, security requirements)
-- Note system invariants — things the system always or never does
+- Note system invariants - things the system always or never does
 - Flag areas of the codebase that are unclear, inconsistent, or poorly
   specified
 
@@ -142,7 +142,7 @@ Output: draft [`docs/planning/requirements.md`](/docs/planning/requirements.md)
 
 ### First run
 
-1. Read any existing content in `docs/planning/` and `docs/reference/` — do
+1. Read any existing content in `docs/planning/` and `docs/reference/` - do
    not overwrite anything without reading it first.
 2. Create [`context/ai/discover-progress.md`](/context/ai/discover-progress.md)
    from the template at
@@ -164,11 +164,11 @@ Output: draft [`docs/planning/requirements.md`](/docs/planning/requirements.md)
 Not everything can be read directly from code. Where you are inferring intent
 rather than stating a confirmed fact, mark it:
 
-- `[INFERRED]` — a reasonable inference from code behaviour; probably correct
+- `[INFERRED]` - a reasonable inference from code behaviour; probably correct
   but should be verified
-- `[UNCERTAIN]` — low confidence; the human should confirm before relying on
+- `[UNCERTAIN]` - low confidence; the human should confirm before relying on
   this
-- `[MISSING]` — information that is not present in the code and cannot be
+- `[MISSING]` - information that is not present in the code and cannot be
   inferred; the human must supply it
 
 This preserves honesty and helps the human know where to focus their review.
@@ -182,8 +182,8 @@ When all six phases are complete:
 1. Ensure all `[UNCERTAIN]` and `[MISSING]` items are consolidated in the
    Gaps section of `discover-progress.md`
 2. Update [`context/MODE.md`](/context/MODE.md) to `BUILD`
-3. Prompt the human to review the generated docs — especially any flagged items
-   — before starting a BUILD run
+3. Prompt the human to review the generated docs - especially any flagged items
+   - before starting a BUILD run
 
 ## Do not do everything in one run
 
@@ -222,6 +222,6 @@ If answers don't exist, remind the user you need more information.
 
 ## Orientation
 
-Do not create README files during discovery — documenting their absence in
+Do not create README files during discovery - documenting their absence in
 `discover-progress.md` is sufficient. If a directory has no README and its
 purpose is unclear, note it as a gap.

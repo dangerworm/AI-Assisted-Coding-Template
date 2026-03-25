@@ -1,6 +1,12 @@
 # Technologies
 
-Record stack choices and versions here. This prevents dependency drift.
+Record the tools, materials, platforms, and approaches in use here. This
+prevents drift and gives AI agents a clear picture of what is available.
+
+> The sections below use software terminology as a starting point. Adapt or
+> replace headings to suit your domain - a garden project might list Plant
+> Species, Hardscaping Materials, and Suppliers; a process project might list
+> Tools, Systems, and Integrations.
 
 ## Languages
 

@@ -9,7 +9,7 @@
 
 ### ✅ Completed Changes
 
-#### Chunk [X] — [slice name]
+#### Chunk [X] - [slice name]
 
 - ✅ [PLACEHOLDER: Completed change]
 - ✅ [PLACEHOLDER: Completed change]

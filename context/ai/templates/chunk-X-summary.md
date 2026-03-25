@@ -35,8 +35,8 @@ Audit / Event State:
 
 Core Entities:
 
-- [EntityName] – [Responsibility]
-- [EntityName] – [Responsibility]
+- [EntityName] - [Responsibility]
+- [EntityName] - [Responsibility]
 
 Enums / Value Types:
 
@@ -47,15 +47,15 @@ Enums / Value Types:
 
 Backend:
 
-- [path/to/file] – [Purpose]
+- [path/to/file] - [Purpose]
 
 Frontend (if applicable):
 
-- [path/to/file] – [Purpose]
+- [path/to/file] - [Purpose]
 
 Tests:
 
-- [path/to/test] – [Coverage]
+- [path/to/test] - [Coverage]
 
 ## Key Achievements
 
@@ -77,7 +77,7 @@ Frontend:
 
 Automated Tests:
 
-- [Test name] – [What it validates]
+- [Test name] - [What it validates]
 
 Test Infrastructure:
 

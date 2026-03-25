@@ -49,7 +49,7 @@ New elements introduced in this chunk:
 
    Properties / Attributes:
 
-   - [Property] – [Meaning]
+   - [Property] - [Meaning]
 
    Relationships:
 
@@ -58,7 +58,7 @@ New elements introduced in this chunk:
 > **For software projects:** expand this section into Database Schema,
 > Repository Layer, Service Layer, and API Layer subsections as needed.
 >
-> **For other domains:** add subsections relevant to your work — e.g. a design
+> **For other domains:** add subsections relevant to your work - e.g. a design
 > project might have Constraints, Materials, and Deliverables; a process
 > project might have Inputs, Outputs, Roles, and Handoffs.
 

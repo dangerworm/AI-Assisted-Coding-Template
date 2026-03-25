@@ -32,14 +32,14 @@ Copy and use this block for each proposal:
 
 **Current approach:** [What the system does now, specifically]
 
-**Recommended approach:** [What is proposed — name the specific technology,
+**Recommended approach:** [What is proposed - name the specific technology,
 pattern, or approach]
 
 **Why:** [Concrete benefits]
 
 **Trade-offs:** [What the human gives up or takes on]
 
-**Migration complexity:** Low / Medium / High — [brief rationale]
+**Migration complexity:** Low / Medium / High - [brief rationale]
 
 **Status:** Proposed / Accepted / Rejected / Deferred
 

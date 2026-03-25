@@ -50,7 +50,7 @@ Each slice should be demonstrable in a local environment.
 
 ## 2. Chunking plan
 
-### Chunk A — Repository readiness and development environment
+### Chunk A - Repository readiness and development environment
 
 Purpose:
 
@@ -70,7 +70,7 @@ Exit criteria:
 - Tests pass
 - One documented run path exists
 
-### Chunk B+ — Feature delivery
+### Chunk B+ - Feature delivery
 
 Each subsequent chunk introduces a bounded capability.
 
@@ -88,9 +88,9 @@ Exit criteria:
 
 #### Example chunk headings
 
-- Chunk B — [PLACEHOLDER: slice name] ✅ COMPLETE
-- Chunk C — [PLACEHOLDER: slice name] ⏳ REQUIRES USER INPUT
-- Chunk D — [PLACEHOLDER: slice name]
+- Chunk B - [PLACEHOLDER: slice name] ✅ COMPLETE
+- Chunk C - [PLACEHOLDER: slice name] ⏳ REQUIRES USER INPUT
+- Chunk D - [PLACEHOLDER: slice name]
 
 ## 3. Known risk areas
 

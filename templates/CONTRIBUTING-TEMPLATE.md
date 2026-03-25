@@ -35,7 +35,7 @@ it.
 
 ## How changes should be made
 
-This is the heart of the document. You’re teaching taste here, not rules.
+This is the heart of the document. You're teaching taste here, not rules.
 
 - Preferred size of changes
 - How to structure commits
@@ -47,7 +47,7 @@ This is the heart of the document. You’re teaching taste here, not rules.
 Define "acceptable change". This aligns effort with review reality.
 
 - What must pass
-- What’s optional
+- What's optional
 - What reviewers will look for
 
 ## Review process and norms

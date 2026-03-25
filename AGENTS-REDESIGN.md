@@ -1,11 +1,11 @@
-# Agent Information — REDESIGN Mode
+# Agent Information - REDESIGN Mode
 
 ## Purpose
 
 In REDESIGN mode your job is to critically assess the existing system (or its
 documentation), propose specific modernisation improvements, and collaborate
 with the human to produce a revised set of planning documents representing the
-target state — the system as it _should_ be built.
+target state - the system as it _should_ be built.
 
 This is an opinionated, conversational mode. You are expected to make concrete
 recommendations, justify them clearly, acknowledge trade-offs honestly, and then
@@ -21,13 +21,13 @@ decision records only.
 
 - Tag every proposal with `[MUST]`, `[SHOULD]`, `[COULD]`, or `[KEEP]`
 - Read all planning documents before forming any opinions
-- Record every decision — accepted, rejected, or deferred — in both
+- Record every decision - accepted, rejected, or deferred - in both
   `redesign-notes.md` and `decisions.md`
 
 ### Ask first
 
 - Any `[MUST]` item the human wants to challenge or defer
-- The scope of the redesign — what is in and what is out
+- The scope of the redesign - what is in and what is out
 - Constraints on the human's side (budget, team skills, timeline, regulation)
   before finalising recommendations
 
@@ -103,7 +103,7 @@ good as well as what should change.
 ### API design
 
 - Is the API style appropriate and applied consistently? (REST, GraphQL, gRPC,
-  tRPC — pick one and use it)
+  tRPC - pick one and use it)
 - Are there inconsistencies in naming conventions, versioning, error shapes, or
   authentication patterns across endpoints?
 - Is the API designed for the actual consumers, or was it an afterthought?
@@ -142,29 +142,29 @@ Structure each recommendation as follows:
 
 **Current approach:** [what the system does now, specifically]
 
-**Recommended approach:** [what you propose instead, specifically — name the
+**Recommended approach:** [what you propose instead, specifically - name the
 technology, pattern, or approach]
 
 **Why:** [concrete benefits: performance, maintainability, security, developer
 experience, cost reduction, reduced operational complexity, etc.]
 
-**Trade-offs:** [what the human gives up or takes on by making this change —
+**Trade-offs:** [what the human gives up or takes on by making this change -
 migration effort, learning curve, new dependencies, etc.]
 
-**Migration complexity:** Low / Medium / High — with a brief rationale
+**Migration complexity:** Low / Medium / High - with a brief rationale
 
 **Priority:**
 
 Use one of:
 
-- `[MUST]` — critical: a security vulnerability, a deprecated or unsupported
+- `[MUST]` - critical: a security vulnerability, a deprecated or unsupported
   dependency, or a decision that blocks the rest of the redesign. These should
   be adopted unless the human has a specific overriding reason.
-- `[SHOULD]` — a clear improvement with a reasonable migration path; your
+- `[SHOULD]` - a clear improvement with a reasonable migration path; your
   primary recommendations.
-- `[COULD]` — a worthwhile improvement but not urgent; defer unless the team has
+- `[COULD]` - a worthwhile improvement but not urgent; defer unless the team has
   capacity.
-- `[KEEP]` — something that is already good; call it out explicitly so the BUILD
+- `[KEEP]` - something that is already good; call it out explicitly so the BUILD
   agent knows to preserve it.
 
 ## Workflow
@@ -197,11 +197,11 @@ Work through each assessment area in turn. For each:
 
 Group your recommendations and present them in this order:
 
-1. `[MUST]` items — non-negotiable; present these first
-2. `[SHOULD]` items — your primary recommendations; ask the human to accept,
+1. `[MUST]` items - non-negotiable; present these first
+2. `[SHOULD]` items - your primary recommendations; ask the human to accept,
    reject, or defer each one
-3. `[COULD]` items — optional; ask the human whether they have capacity
-4. `[KEEP]` items — confirm these will be carried forward
+3. `[COULD]` items - optional; ask the human whether they have capacity
+4. `[KEEP]` items - confirm these will be carried forward
 
 For each `[SHOULD]` and `[COULD]` item, the human should indicate: **Accept**,
 **Reject**, or **Defer**. Record their reasoning if they reject or defer.
@@ -226,7 +226,7 @@ Once all proposals have been reviewed:
 - If the changes are substantial, preserve the originals as
   `docs/planning/legacy/` so the DISCOVER output is not lost
 - The revised documents must describe the system _to be built_, not the system
-  _that exists_ — remove hedging language and DISCOVER-mode inference tags where
+  _that exists_ - remove hedging language and DISCOVER-mode inference tags where
   the redesign has superseded them
 - Note significant departures from the original in
   [`context/ai/changes.md`](/context/ai/changes.md)

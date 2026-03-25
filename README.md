@@ -1,12 +1,12 @@
 # AI Project Template
 
-This template is for anyone working on projects in collaboration with AI
-agents. Feel free to fork it and customise it for your own purposes.
+This template is for anyone working on projects in collaboration with AI agents.
+Feel free to fork it and customise it for your own purposes.
 
 ## What this is
 
 AI agents are capable collaborators, but their effective context is limited for
-larger, longer-running projects. Without structure, they drift — re-doing work,
+larger, longer-running projects. Without structure, they drift - re-doing work,
 forgetting earlier decisions, and losing sight of the original goals.
 
 Structuring a repository like this seems to help them work on bigger projects:
@@ -20,14 +20,14 @@ This template supports three modes forming a pipeline. Check
 [`context/MODE.md`](context/MODE.md) and set the one that matches your
 situation.
 
-| Starting point                             | Recommended pipeline              |
-| ------------------------------------------ | --------------------------------- |
-| New project with a specification           | `BUILD`                           |
-| Existing codebase, straightforward rebuild | `DISCOVER` → `BUILD`              |
-| Existing codebase, modernisation needed    | `DISCOVER` → `REDESIGN` → `BUILD` |
-| Existing docs, modernisation needed        | `REDESIGN` → `BUILD`              |
+| Starting point                             | Recommended pipeline                |
+| ------------------------------------------ | ----------------------------------- |
+| New project with a specification           | `BUILD`                             |
+| Existing codebase, straightforward rebuild | `DISCOVER` -> `BUILD`               |
+| Existing codebase, modernisation needed    | `DISCOVER` -> `REDESIGN` -> `BUILD` |
+| Existing docs, modernisation needed        | `REDESIGN` -> `BUILD`               |
 
-### BUILD — build from a specification
+### BUILD - build from a specification
 
 1. Fork this repository (or use it as a GitHub template), then clone it.
 2. Write your project constraints and intent in:
@@ -40,7 +40,7 @@ situation.
    the BUILD workflow.
 5. Put your project output in `work`.
 
-### DISCOVER — generate documentation from existing code
+### DISCOVER - generate documentation from existing code
 
 1. Fork this repository (or use it as a GitHub template), then clone it.
 2. Copy or clone the existing codebase into `work-existing`.
@@ -50,7 +50,7 @@ situation.
 5. Review the output, address any flagged gaps, then switch to `REDESIGN` or
    `BUILD`.
 
-### REDESIGN — modernise before building
+### REDESIGN - modernise before building
 
 1. Ensure planning documents exist in `docs/planning/` (from a DISCOVER run or
    written by hand).
@@ -90,7 +90,7 @@ For more information, have a look at [.vscode/README.md](.vscode/README.md).
 
 ### `work`
 
-This is where your project output goes — application code, generated assets,
+This is where your project output goes - application code, generated assets,
 design files, or whatever the BUILD mode produces for your domain.
 
 - If you are building a software project and use Docker Compose, start with
@@ -122,10 +122,10 @@ material:
 - anything else you can think of
 
 If you are starting from an idea rather than a specification, use
-`docs/reference/` to capture notes as you discuss and develop the idea with
-the AI. These notes give both you and the agent a shared memory to work from
-across sessions, and feed into the planning documents in `docs/planning/` once
-the direction is clear.
+`docs/reference/` to capture notes as you discuss and develop the idea with the
+AI. These notes give both you and the agent a shared memory to work from across
+sessions, and feed into the planning documents in `docs/planning/` once the
+direction is clear.
 
 ### `context`
 

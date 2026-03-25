@@ -11,7 +11,7 @@ any reference material the human provides) and extract decisions that are alread
 implicitly made. Write them as decision records below.
 
 A decision worth recording is any constraint that, if violated, would cause
-significant rework — database engine, auth approach, deployment target, API
+significant rework - database engine, auth approach, deployment target, API
 style, data ownership rules, etc.
 
 When a human answers questions in [answers.md](/context/user/answers.md), the
@@ -33,7 +33,7 @@ No questions have been asked, and so no decisions have been made yet.
 
 ## Template (copy/paste)
 
-### YYYY-MM-DD — [short title]
+### YYYY-MM-DD - [short title]
 
 - **Context:** Why this decision was needed / what it unblocks.
 - **Decision:** The chosen option, stated as a constraint.
