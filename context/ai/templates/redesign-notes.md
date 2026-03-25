@@ -18,8 +18,8 @@ redesign. What is the headline problem being addressed?]
 
 ## Proposals
 
-Use one section per proposal. Tag each with its priority:
-`[MUST]` / `[SHOULD]` / `[COULD]` / `[KEEP]`
+Use one section per proposal. Tag each with its priority: `[MUST]` / `[SHOULD]`
+/ `[COULD]` / `[KEEP]`
 
 Copy and use this block for each proposal:
 
@@ -51,8 +51,8 @@ pattern, or approach]
 
 Items identified as already good that must be carried forward:
 
-| Area | What is good | Why |
-|------|-------------|-----|
+| Area   | What is good  | Why      |
+| ------ | ------------- | -------- |
 | [Area] | [Description] | [Reason] |
 
 ---
@@ -61,9 +61,9 @@ Items identified as already good that must be carried forward:
 
 Quick-reference summary updated after each human response:
 
-| Proposal | Decision | Reason |
-|----------|----------|--------|
-| [Title] | Accepted / Rejected / Deferred | [Brief reason] |
+| Proposal | Decision                       | Reason         |
+| -------- | ------------------------------ | -------------- |
+| [Title]  | Accepted / Rejected / Deferred | [Brief reason] |
 
 ---
 

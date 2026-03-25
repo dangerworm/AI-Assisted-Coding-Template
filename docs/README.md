@@ -5,16 +5,20 @@ material.
 
 ## /docs/planning
 
-The source of truth for what is being built and how. AI agents read these
-files to understand requirements and constraints before starting work.
+The source of truth for what is being built and how. AI agents read these files
+to understand requirements and constraints before starting work.
 
-- `architecture.md` - how the project is structured
-- `features.md` - what it does, for whom, and in what order
-- `requirements.md` - what it must and must not do
-- `technologies.md` - tools, materials, platforms, and approaches in use
+- [`architecture.md`](/docs/planning/architecture.md) - how the project is
+  structured
+- [`features.md`](/docs/planning/features.md) - what it does, for whom, and in
+  what order
+- [`requirements.md`](/docs/planning/requirements.md) - what it must and must
+  not do
+- [`technologies.md`](/docs/planning/technologies.md) - tools, materials,
+  platforms, and approaches in use
 
-If you are starting from scratch, these files may begin empty and be filled
-in through conversation with the AI. See the BUILD mode guidance for how that
+If you are starting from scratch, these files may begin empty and be filled in
+through conversation with the AI. See the BUILD mode guidance for how that
 works.
 
 ## /docs/reference

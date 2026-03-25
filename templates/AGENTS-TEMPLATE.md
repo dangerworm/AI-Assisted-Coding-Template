@@ -3,21 +3,21 @@
 When you fork this repository, the three mode files
 ([`AGENTS-BUILD.md`](/AGENTS-BUILD.md),
 [`AGENTS-REDESIGN.md`](/AGENTS-REDESIGN.md),
-[`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md)) contain generic guidance that
-works for most projects out of the box.
+[`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md)) contain generic guidance that works
+for most projects out of the box.
 
-For best results, add project-specific context to the relevant mode file  - 
-particularly `AGENTS-BUILD.md`, which is where the agent will spend most of
-its time. `AGENTS.md` itself should remain a short router; do not add project
-detail there.
+For best results, add project-specific context to the relevant mode file -
+particularly `AGENTS-BUILD.md`, which is where the agent will spend most of its
+time. `AGENTS.md` itself should remain a short router; do not add project detail
+there.
 
 ---
 
 ## What to add to AGENTS-BUILD.md (and why)
 
-Think of additions to AGENTS-BUILD.md as answers to the question: "What would
-a new developer need to know on day one that isn't already obvious from the
-code or the planning documents?"
+Think of additions to AGENTS-BUILD.md as answers to the question: "What would a
+new developer need to know on day one that isn't already obvious from the code
+or the planning documents?"
 
 AGENTS.md should be short enough that an agent can internalise it in one pass.
 The research benchmark is roughly 150-200 distinct instructions; beyond that,
@@ -51,8 +51,8 @@ preferred idiom.
 
 ### An explicit "never do" list
 
-Agents default to action. A short list of prohibitions gives them permission
-to stop.
+Agents default to action. A short list of prohibitions gives them permission to
+stop.
 
 Examples:
 
@@ -62,8 +62,8 @@ Examples:
 
 ### Testing and verification expectations
 
-Spell out what "done" means for this project. Agents will happily produce
-output that passes a surface check and quietly breaks invariants.
+Spell out what "done" means for this project. Agents will happily produce output
+that passes a surface check and quietly breaks invariants.
 
 Examples:
 

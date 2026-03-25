@@ -27,7 +27,7 @@ When an insight graduates to a confirmed issue, move it here and note it in
 - **Reproduction:** Steps or conditions that trigger it (if applicable)
 - **Workaround:** Any interim mitigation in place (or "None")
 - **Fix required:** What needs to change to resolve it
-- **Blocked by:** Any dependency that prevents fixing it now (or "Nothing  - 
+- **Blocked by:** Any dependency that prevents fixing it now (or "Nothing -
   deprioritised")
 - **References:** Links to related issues, PRs, or `insights.md` entries
 

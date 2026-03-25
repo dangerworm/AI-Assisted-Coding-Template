@@ -17,7 +17,8 @@ Read, analyse, and document only.
 
 - Mark all inferences explicitly: `[INFERRED]`, `[UNCERTAIN]`, or `[MISSING]`
 - Read any existing content in `docs/planning/` before writing to those files
-- Update `discover-progress.md` at the end of every phase
+- Update [`discover-progress.md`](/context/ai/discover-progress.md) at the end
+  of every phase
 
 ### Ask first
 
@@ -47,7 +48,8 @@ A successful discover run produces populated, accurate versions of:
 Each document should be:
 
 - Complete enough to rebuild from
-- Honest about gaps and inferences (see [Marking inferences](#marking-inferences))
+- Honest about gaps and inferences (see
+  [Marking inferences](#marking-inferences))
 - Written for a developer who has never seen this codebase
 
 ## Discovery phases
@@ -63,8 +65,8 @@ Goal: understand the shape of `work-existing/` before reading any individual
 file in depth.
 
 - Map the top-level directory structure of `work-existing/`
-- Identify languages, frameworks, and build systems from file extensions,
-  config files, and dependency manifests
+- Identify languages, frameworks, and build systems from file extensions, config
+  files, and dependency manifests
 - Locate entry points (main files, app bootstraps, routers)
 - Identify third-party integrations from dependency lists and config
 
@@ -90,8 +92,8 @@ Output: draft [`docs/planning/architecture.md`](/docs/planning/architecture.md)
 
 Goal: understand what the system does from a user perspective.
 
-- Enumerate user-facing capabilities from routes, UI screens, API endpoints,
-  CLI commands, or scheduled jobs
+- Enumerate user-facing capabilities from routes, UI screens, API endpoints, CLI
+  commands, or scheduled jobs
 - Group capabilities by functional area
 - Identify user roles and what each can do
 - Note any multi-step workflows or processes
@@ -107,8 +109,8 @@ Goal: reconstruct the complete data model.
 - Note constraints, indexes, and invariants
 - Map enums and lookup values
 
-Output: populate [`docs/reference/schema.md`](/docs/reference/schema.md).
-If `work/database/schema.sql` is absent or outdated, reconstruct it too.
+Output: populate [`docs/reference/schema.md`](/docs/reference/schema.md). If
+`work/database/schema.sql` is absent or outdated, reconstruct it too.
 
 ### Phase 5: Technologies
 
@@ -131,8 +133,7 @@ Goal: infer the non-obvious constraints and rules embedded in the code.
 - Identify non-functional requirements (performance assumptions, scale targets,
   SLAs, security requirements)
 - Note system invariants - things the system always or never does
-- Flag areas of the codebase that are unclear, inconsistent, or poorly
-  specified
+- Flag areas of the codebase that are unclear, inconsistent, or poorly specified
 
 Output: draft [`docs/planning/requirements.md`](/docs/planning/requirements.md)
 
@@ -142,21 +143,21 @@ Output: draft [`docs/planning/requirements.md`](/docs/planning/requirements.md)
 
 ### First run
 
-1. Read any existing content in `docs/planning/` and `docs/reference/` - do
-   not overwrite anything without reading it first.
+1. Read any existing content in `docs/planning/` and `docs/reference/` - do not
+   overwrite anything without reading it first.
 2. Create [`context/ai/discover-progress.md`](/context/ai/discover-progress.md)
-   from the template at
-   `context/ai/templates/discover-phase-progress.md`.
+   from the template at `context/ai/templates/discover-phase-progress.md`.
 3. Begin Phase 1.
 
 ### Per-phase loop
 
 1. Read the relevant files in `work-existing/`
-2. Update the relevant section of `discover-progress.md` with findings and
-   open questions
+2. Update the relevant section of `discover-progress.md` with findings and open
+   questions
 3. Produce or update the output document for the phase
 4. Mark inferences clearly (see below)
-5. Ask questions where needed (see [Blocked?](#blocked-ask-then-record-decisions))
+5. Ask questions where needed (see
+   [Blocked?](#blocked-ask-then-record-decisions))
 6. Mark the phase complete in `discover-progress.md`
 
 ### Marking inferences
@@ -171,16 +172,16 @@ rather than stating a confirmed fact, mark it:
 - `[MISSING]` - information that is not present in the code and cannot be
   inferred; the human must supply it
 
-This preserves honesty and helps the human know where to focus their review.
-Do not remove these tags from output documents; the human should clear them as
-they verify each item.
+This preserves honesty and helps the human know where to focus their review. Do
+not remove these tags from output documents; the human should clear them as they
+verify each item.
 
 ### Completing discovery
 
 When all six phases are complete:
 
-1. Ensure all `[UNCERTAIN]` and `[MISSING]` items are consolidated in the
-   Gaps section of `discover-progress.md`
+1. Ensure all `[UNCERTAIN]` and `[MISSING]` items are consolidated in the Gaps
+   section of `discover-progress.md`
 2. Update [`context/MODE.md`](/context/MODE.md) to `BUILD`
 3. Prompt the human to review the generated docs - especially any flagged items
    - before starting a BUILD run
@@ -215,8 +216,8 @@ On the next run, if answers exist:
    [`context/ai/decisions.md`](/context/ai/decisions.md).
 2. Remove the answered question from `questions.md`.
 3. Remove the accepted answer from `answers.md`.
-4. Update the relevant output document to replace the `[UNCERTAIN]` marking
-   with the confirmed fact.
+4. Update the relevant output document to replace the `[UNCERTAIN]` marking with
+   the confirmed fact.
 
 If answers don't exist, remind the user you need more information.
 

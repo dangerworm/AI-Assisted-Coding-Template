@@ -87,7 +87,6 @@ This system involves complexity in areas such as:
 > The following is an example from a previous project
 
 1. **Exceptional Documentation Quality**
-
    - Specification is normative and complete
    - Design decisions are explicit with rationale
    - Features are prioritized and implementation-ordered
@@ -95,14 +94,12 @@ This system involves complexity in areas such as:
    - Cross-references are consistent
 
 1. **Structured Delivery Approach**
-
    - Clear phasing (0-7) from foundations to advanced features
    - Vertical slicing strategy prevents "big bang" failures
    - Definition of Done per chunk ensures quality gates
    - Scratch pad system provides memory across context windows
 
 1. **Smart Technical Choices**
-
    - Data storage choices fit the domain
    - Audit/event strategy matches requirements
    - Local dev environment mirrors production where feasible
@@ -118,19 +115,16 @@ This system involves complexity in areas such as:
 > The following is an example from a previous project
 
 1. **Strict Adherence to Specification**
-
    - The normative requirements prevent drift
    - Design principles (audit-first, trust-agnostic) are guardrails
    - Feature list provides concrete implementation targets
 
 1. **Incremental Validation**
-
    - Each chunk must be demonstrable
    - Tests must cover critical paths
    - Human review gates prevent accumulating technical debt
 
 1. **Domain Complexity Management**
-
    - Event model is well-defined
    - Bounded contexts are clear (identity, inventory, audit, reporting)
    - Multi-tenancy enforced at every boundary
@@ -151,18 +145,15 @@ This system involves complexity in areas such as:
 ### Recommended Implementation Strategy
 
 1. **Chunk A**: [PLACEHOLDER: Foundational work]
-
    - [PLACEHOLDER: Environment or tooling setup]
    - [PLACEHOLDER: Infrastructure or config work]
    - [PLACEHOLDER: Documentation updates]
 
 1. **Chunk B**: [PLACEHOLDER: Core capability]
-
    - [PLACEHOLDER: Identity / permissions / core models]
    - [PLACEHOLDER: Supporting UI or APIs]
 
 1. **Chunk C+**: [PLACEHOLDER: Progressive feature delivery]
-
    - Follow [features.md](/docs/planning/features.md) ordering strictly
    - Each chunk includes implementation + tests + audit + docs
    - Continuous validation and review

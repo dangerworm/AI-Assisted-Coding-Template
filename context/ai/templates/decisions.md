@@ -7,8 +7,8 @@ binding until explicitly superseded.
 
 Do not leave this file empty. Before the first chunk begins, scan existing
 design documents (`docs/planning/*`, `schema.md`, conversation transcripts, or
-any reference material the human provides) and extract decisions that are already
-implicitly made. Write them as decision records below.
+any reference material the human provides) and extract decisions that are
+already implicitly made. Write them as decision records below.
 
 A decision worth recording is any constraint that, if violated, would cause
 significant rework - database engine, auth approach, deployment target, API

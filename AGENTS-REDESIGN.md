@@ -220,9 +220,12 @@ For each proposal the human responds to:
 
 Once all proposals have been reviewed:
 
-- Update `docs/planning/architecture.md`, `features.md`, `requirements.md`,
-  `technologies.md`, and `docs/reference/schema.md` to reflect the agreed target
-  state
+- Update [`docs/planning/architecture.md`](/docs/planning/architecture.md),
+  [`features.md`](/docs/planning/features.md),
+  [`requirements.md`](/docs/planning/requirements.md),
+  [`technologies.md`](/docs/planning/technologies.md), and
+  [`docs/reference/schema.md`](/docs/reference/schema.md) to reflect the agreed
+  target state
 - If the changes are substantial, preserve the originals as
   `docs/planning/legacy/` so the DISCOVER output is not lost
 - The revised documents must describe the system _to be built_, not the system

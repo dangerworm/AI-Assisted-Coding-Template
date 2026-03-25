@@ -18,7 +18,8 @@ avoid making big product decisions unilaterally.
 - Read all files in `context/ai/` at the start of every session before writing
   anything
 - Update chunk progress files after each completed stage
-- Record every answered question as a durable decision in `decisions.md`
+- Record every answered question as a durable decision in
+  [`decisions.md`](/context/ai/decisions.md)
 - Discuss significant design choices with the human before implementing them
 
 ### Ask first
@@ -32,7 +33,7 @@ avoid making big product decisions unilaterally.
 - Make unilateral product or architectural decisions
 - Store secrets, credentials, or API keys in any committed file
 - Write large amounts of output without being able to verify it
-- Skip updating `context/ai/` files after completing work
+- Skip updating [`context/ai/`](/context/ai/) files after completing work
 
 ---
 
@@ -94,7 +95,7 @@ every time a change is made to the data model. These then form a comprehensive,
 consistent, well-commented view of the data model, especially if `schema.md` is
 idempotent (as it should be). `schema.md` is important to the user as it gives a
 complete visual model of the data, and `schema.sql` is as important to you (if
-not more so) since reading it once gives a complete mental model of the data  - 
+not more so) since reading it once gives a complete mental model of the data -
 every table, every relationship, every constraint. Backend handlers should
 follow directly from the schema (same field names, same structure) so that an
 understanding of the schema enables you to make backend changes with very little
@@ -143,8 +144,8 @@ explained below.
 
 #### Starting from existing planning docs
 
-If `docs/planning/*` has been meaningfully populated, create the files below
-(if missing) or populate them (if empty) using the templates in
+If `docs/planning/*` has been meaningfully populated, create the files below (if
+missing) or populate them (if empty) using the templates in
 `/context/ai/templates` as a guide:
 
 - [context-pack.md](/context/ai/context-pack.md) (stable constraints you will
@@ -167,8 +168,8 @@ Work through these questions in order, one at a time:
    look like?
 2. **Scope** - What is in scope and what is explicitly out of scope? What are
    the known constraints (time, budget, team size, strong preferences)?
-3. **Features** - What are the key things it must do? What would be nice to
-   have but is not essential?
+3. **Features** - What are the key things it must do? What would be nice to have
+   but is not essential?
 4. **Architecture** - How should it be structured? Are there strong preferences
    or prior decisions about how it should be organised or delivered - tools,
    materials, platforms, patterns, or approaches?
@@ -178,19 +179,19 @@ Work through these questions in order, one at a time:
 
 As the conversation progresses:
 
-- Save notes, sketches, rough ideas, and any reference material the human
-  shares to [`docs/reference/`](/docs/reference/). These notes do not need to
-  be polished - their purpose is to preserve the conversation so that both you
-  and the human can pick up exactly where you left off if the ideation spans
+- Save notes, sketches, rough ideas, and any reference material the human shares
+  to [`docs/reference/`](/docs/reference/). These notes do not need to be
+  polished - their purpose is to preserve the conversation so that both you and
+  the human can pick up exactly where you left off if the ideation spans
   multiple sessions.
-- Once a topic is clear enough, draft the relevant planning document and ask
-  the human to confirm it before treating it as settled.
+- Once a topic is clear enough, draft the relevant planning document and ask the
+  human to confirm it before treating it as settled.
 - Do not begin work on chunks until all four planning documents have at least a
   confirmed first draft.
 
 This conversation may take more than one session. That is fine. The notes in
-`docs/reference/` and the in-progress drafts in `docs/planning/` are your
-shared memory across sessions.
+`docs/reference/` and the in-progress drafts in `docs/planning/` are your shared
+memory across sessions.
 
 Otherwise, create [chunk-A-progress.md](/context/ai/chunk-A-progress.md).
 

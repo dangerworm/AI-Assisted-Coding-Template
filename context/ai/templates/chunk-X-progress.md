@@ -12,8 +12,8 @@ This chunk delivers:
 - [Secondary outcome]
 - [Supporting or cross-cutting concern]
 
-The goal is to deliver [high-level outcome] while preserving all constraints
-and invariants defined in the planning documents.
+The goal is to deliver [high-level outcome] while preserving all constraints and
+invariants defined in the planning documents.
 
 ## Scope
 
@@ -48,19 +48,17 @@ New elements introduced in this chunk:
    Purpose: [Why this exists]
 
    Properties / Attributes:
-
    - [Property] - [Meaning]
 
    Relationships:
-
    - [How it connects to other elements]
 
 > **For software projects:** expand this section into Database Schema,
 > Repository Layer, Service Layer, and API Layer subsections as needed.
 >
 > **For other domains:** add subsections relevant to your work - e.g. a design
-> project might have Constraints, Materials, and Deliverables; a process
-> project might have Inputs, Outputs, Roles, and Handoffs.
+> project might have Constraints, Materials, and Deliverables; a process project
+> might have Inputs, Outputs, Roles, and Handoffs.
 
 ## Exit Criteria
 

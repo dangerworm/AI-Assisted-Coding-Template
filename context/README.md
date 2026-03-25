@@ -49,8 +49,8 @@ A _completed_ chunk should be:
 
 #### **Stage**
 
-Chunks should be implemented in stages. The default stages for software
-projects are:
+Chunks should be implemented in stages. The default stages for software projects
+are:
 
 - DB: migrations and seed data
 - API: data schema, functionality, validation, and permission checks
@@ -104,8 +104,9 @@ approach, deployment target, API style, etc. A decision worth recording is any
 constraint that, if violated, would cause significant rework.
 
 Ongoing workflow: when the human answers a question, append a decision record
-here, then remove the question from `user/questions.md` and the answer from
-`user/answers.md`.
+here, then remove the question from
+[`user/questions.md`](/context/user/questions.md) and the answer from
+[`user/answers.md`](/context/user/answers.md).
 
 #### `chunk-X-progress.md`
 
@@ -166,8 +167,8 @@ Each entry should include:
 A registry of things that are **known to be broken or deficient** and have not
 yet been fixed. This is distinct from `insights.md`:
 
-- `insights.md` - observations and risks that may or may not turn out to be
-  real problems; needs investigation
+- `insights.md` - observations and risks that may or may not turn out to be real
+  problems; needs investigation
 - `known-issues.md` - confirmed problems that need a fix, not an investigation
 
 When an insight is confirmed as a real bug or accepted tech debt, move it to
@@ -224,9 +225,9 @@ architecture differs from the original.
 
 Tracks progress through the six discovery phases (Inventory, Architecture,
 Features, Data Model, Technologies, Requirements). Acts as the AI's working
-notes during a DISCOVER run - equivalent to `chunk-X-progress.md` in BUILD
-mode. Also consolidates all `[UNCERTAIN]` and `[MISSING]` items for human
-review before switching to BUILD mode.
+notes during a DISCOVER run - equivalent to `chunk-X-progress.md` in BUILD mode.
+Also consolidates all `[UNCERTAIN]` and `[MISSING]` items for human review
+before switching to BUILD mode.
 
 #### `questions.md`
 
@@ -251,8 +252,8 @@ Each question must be tagged with an urgency level:
 
 Each time the AI discovers that it has a question or questions, it should:
 
-- append a question (with urgency tag) to [questions.md](./user/questions.md)
-  in a similar format to those in the template
+- append a question (with urgency tag) to [questions.md](./user/questions.md) in
+  a similar format to those in the template
 - create a heading and space for the user to reply in
   [answers.md](./user/answers.md)
 - prompt the human to check the questions file at the end of a response
@@ -273,10 +274,10 @@ will:
 ## A note on memory systems
 
 If the AI assistant has an **external memory system** (e.g. files stored outside
-this repository, such as `~/.claude/projects/...`), there is a structural tension
-between that system and this `context/` folder. Both may record similar things  - 
-project goals, decisions, insights - but from different angles and at different
-times. They can diverge.
+this repository, such as `~/.claude/projects/...`), there is a structural
+tension between that system and this `context/` folder. Both may record similar
+things - project goals, decisions, insights - but from different angles and at
+different times. They can diverge.
 
 The intended boundary is:
 
