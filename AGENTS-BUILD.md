@@ -82,6 +82,23 @@ You will need a set of planning documents, typically:
 If these planning docs are empty or unclear, propose minimal drafts and ask the
 human to confirm before proceeding with large changes.
 
+## Behaviour files
+
+If [`docs/behaviour/`](/docs/behaviour/) contains files, read them before
+building any feature they describe:
+
+- `required` layer files (`.required.feature` or `.required.md`) are **hard
+  requirements** — implement exactly what they specify. If you believe a
+  requirement is ambiguous or unimplementable, ask before proceeding.
+- `actual` layer files (`.actual.feature` or `.actual.md`) are reference only
+  — they describe what a previous system did, which may or may not match the
+  required behaviour. Do not treat them as authoritative.
+- `stated` layer files can be ignored during BUILD; they served their purpose
+  in DISCOVER and REDESIGN.
+
+See [`docs/behaviour/README.md`](/docs/behaviour/README.md) for format
+conventions.
+
 ## Data schema
 
 Many projects scatter their data model across ORM definitions, migration files,

@@ -14,18 +14,31 @@ an AGENTS.md file gives them operating instructions, rich documentation gives
 them context, and a dedicated folder for planning and memory lets them pick up
 exactly where they left off.
 
+## Who this is for
+
+This template is intentionally domain-agnostic. It is designed to be useful
+to anyone working on a substantial project with an AI agent — not just software
+developers. A researcher documenting a study, an engineer designing a physical
+system, a gardener planning a large garden, an architect proposing a building,
+or an enterprise team rebuilding a business process can all use this template.
+
+The modes, phases, and file structures are written to apply broadly. Where
+domain-specific guidance is relevant (for example, Gherkin `.feature` files for
+software projects with test runners), it is clearly marked as such alongside a
+generic equivalent.
+
 ## Quick start
 
 This template supports three modes forming a pipeline. Check
 [`context/MODE.md`](context/MODE.md) and set the one that matches your
 situation.
 
-| Starting point                             | Recommended pipeline                |
-| ------------------------------------------ | ----------------------------------- |
-| New project with a specification           | `BUILD`                             |
-| Existing codebase, straightforward rebuild | `DISCOVER` -> `BUILD`               |
-| Existing codebase, modernisation needed    | `DISCOVER` -> `REDESIGN` -> `BUILD` |
-| Existing docs, modernisation needed        | `REDESIGN` -> `BUILD`               |
+| Starting point                               | Recommended pipeline                |
+| -------------------------------------------- | ----------------------------------- |
+| New project with a specification             | `BUILD`                             |
+| Existing work, straightforward rebuild       | `DISCOVER` -> `BUILD`               |
+| Existing work, modernisation needed          | `DISCOVER` -> `REDESIGN` -> `BUILD` |
+| Existing docs, modernisation needed          | `REDESIGN` -> `BUILD`               |
 
 ### BUILD - build from a specification
 
@@ -40,14 +53,17 @@ situation.
    the BUILD workflow.
 5. Put your project output in `work`.
 
-### DISCOVER - generate documentation from existing code
+### DISCOVER - generate documentation from existing work
 
 1. Fork this repository (or use it as a GitHub template), then clone it.
-2. Copy or clone the existing codebase into `work-existing`.
-3. Set `context/MODE.md` to `DISCOVER`.
-4. Point your AI agent at the repository. It will work through six discovery
-   phases and produce populated planning documents in `docs/planning/`.
-5. Review the output, address any flagged gaps, then switch to `REDESIGN` or
+2. Copy or clone the existing work into `work-existing`.
+3. Optionally, add any bug reports, user feedback, or known issues to
+   `work-existing/feedback/` — this significantly improves output quality.
+4. Set `context/MODE.md` to `DISCOVER`.
+5. Point your AI agent at the repository. It will work through seven discovery
+   phases, reading every file in depth, and produce populated planning documents
+   in `docs/planning/` and behaviour files in `docs/behaviour/`.
+6. Review the output, address any flagged gaps, then switch to `REDESIGN` or
    `BUILD`.
 
 ### REDESIGN - modernise before building
