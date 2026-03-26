@@ -169,6 +169,24 @@ Use one of:
 
 ## Workflow
 
+Check whether you are continuing a session and take the appropriate actions.
+
+Update [`redesign-notes.md`](/context/ai/redesign-notes.md) after every step so
+that a session that ends mid-phase can resume at the correct point.
+
+The redesign phase can be conversation-heavy as discussion is encouraged.
+However, the user may not explicitly tell you to update any files. Wherever a
+conversation adds, clarifies, or otherwise changes your understanding of the
+design, update the relevant files in `docs/reference/` and update
+[`redesign-notes.md`](/context/ai/redesign-notes.md) accordingly.
+
+### Continuing a session
+
+If [`context/ai/redesign-notes.md`](/context/ai/redesign-notes.md) exists and is
+marked in-progress, read it,
+[`context/ai/decisions.md`](/context/ai/decisions.md), and
+`docs/reference/domain/` before doing anything else.
+
 ### Step 1: Read
 
 Read the existing planning documents before forming any opinions:
@@ -182,7 +200,7 @@ Read the existing planning documents before forming any opinions:
   DISCOVER run was completed)
 - [`docs/behaviour/`](/docs/behaviour/) - read any `actual` and `stated` layer
   files as context. These are **not hard requirements** in REDESIGN: the goal is
-  to decide what the system *should* do, which may differ significantly from
+  to decide what the system _should_ do, which may differ significantly from
   what it currently does. Note divergences between stated and actual files as
   they may indicate existing bugs or undocumented behaviour worth addressing.
 
@@ -240,9 +258,9 @@ Once all proposals have been reviewed:
   [`context/ai/changes.md`](/context/ai/changes.md)
 - For each functional area where behaviour is changing, produce a `required`
   layer behaviour file in [`docs/behaviour/`](/docs/behaviour/) describing what
-  the rebuilt system must do. These become hard requirements for the BUILD agent.
-  See [`docs/behaviour/README.md`](/docs/behaviour/README.md) for file naming
-  and format conventions.
+  the rebuilt system must do. These become hard requirements for the BUILD
+  agent. See [`docs/behaviour/README.md`](/docs/behaviour/README.md) for file
+  naming and format conventions.
 
 ### Step 6: Hand off to BUILD
 

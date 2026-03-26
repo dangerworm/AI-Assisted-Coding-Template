@@ -3,7 +3,8 @@
 ## Start here
 
 Check [`context/MODE.md`](context/MODE.md) to determine the current mode, then
-read the corresponding agent file:
+read the corresponding agent file (below). Everything else is in those files. Do
+not proceed until you have read the relevant one.
 
 | Mode       | Agent file                                 | When to use                                                  |
 | ---------- | ------------------------------------------ | ------------------------------------------------------------ |
@@ -11,8 +12,11 @@ read the corresponding agent file:
 | `REDESIGN` | [`AGENTS-REDESIGN.md`](AGENTS-REDESIGN.md) | Planning docs exist; propose and agree modernisation changes |
 | `DISCOVER` | [`AGENTS-DISCOVER.md`](AGENTS-DISCOVER.md) | Existing work is in `work-existing/`; generate planning docs |
 
-Everything else is in those files. Do not proceed until you have read the
-relevant one.
+### Continuing a session
+
+If you are at a cold start, check the last two commits to see which files
+recently changed. Where files in `context/` or `docs/` changed, read those files
+in addition to the corresponding `AGENTS-*.md` file.
 
 ## In all modes
 
