@@ -15,3 +15,4 @@ repo.
 - [CLAUDE.md, AGENTS.md, and Every AI Config File Explained](https://www.deployhq.com/blog/ai-coding-config-files-guide)
 - [Why Context Engineering?](https://www.promptingguide.ai/agents/context-engineering)
 - [AI Agent Context Compression: Strategies for Long-Running Sessions](https://zylos.ai/research/2026-02-28-ai-agent-context-compression-strategies)
+- [Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)
