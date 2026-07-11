@@ -44,6 +44,8 @@ managing extensions
 
 - Reads from the YAML configuration
 - Installs missing extensions
+- Optionally lists installed extensions not on the list (without changing
+  anything)
 - Optionally removes extensions not on the list
 - Supports interactive confirmation (per-group or per-extension)
 
@@ -63,6 +65,8 @@ Both extension scripts support:
 
 #### Tips
 
+- Use `--list-unlisted` to preview what `--remove` would uninstall, without
+  changing anything
 - Use `--confirm-groups` when you want to review extensions by category
 - Use `--remove` periodically to clean up extensions you no longer need
 - Keep the YAML file in version control to track your extension preferences over
@@ -75,6 +79,9 @@ Both extension scripts support:
 # Bash - install missing extensions (default)
 ./vscode-extensions.bash
 
+# Bash - list installed extensions not in the allowlist, then exit
+./vscode-extensions.bash --list-unlisted
+
 # Bash - remove unlisted extensions and confirm by group
 ./vscode-extensions.bash --remove --confirm-groups
 
@@ -85,6 +92,9 @@ Both extension scripts support:
 ```powershell
 # PowerShell - install missing extensions (default)
 .\vscode-extensions.ps1
+
+# PowerShell - list installed extensions not in the allowlist, then exit
+.\vscode-extensions.ps1 -ListUnlisted
 
 # PowerShell - remove unlisted extensions and confirm by group
 .\vscode-extensions.ps1 -Remove -ConfirmGroups

@@ -12,6 +12,7 @@ set -euo pipefail
 #
 # Options:
 #   --remove               Remove extensions not in allowlist
+#   --list-unlisted        List installed extensions not in allowlist, then exit
 #   --confirm-groups       Prompt before installing each extension group
 #   --confirm-each         Prompt before installing each individual extension
 #   -h, --help             Show this help message
@@ -28,6 +29,7 @@ show_usage() {
   echo
   echo "Options:"
   echo "  --remove               Remove extensions not in allowlist"
+  echo "  --list-unlisted        List installed extensions not in allowlist, then exit"
   echo "  --confirm-groups       Prompt before installing each extension group"
   echo "  --confirm-each         Prompt before installing each individual extension"
   echo "  -h, --help             Show this help message"
@@ -53,8 +55,21 @@ confirm() {
   done
 }
 
+install_extension() {
+  # Install a single extension. A failure here (e.g. an unknown id, or an
+  # extension that needs sign-in) must not abort the whole run under `set -e`,
+  # so the non-zero exit is caught and reported rather than propagated.
+  local ext="$1"
+  local indent="${2:-}"
+  echo "${indent}→ $ext"
+  if ! "$CODE_BIN" --install-extension "$ext" >/dev/null; then
+    echo "${indent}! Failed to install $ext (see message above)"
+  fi
+}
+
 # Parse arguments
 REMOVE_EXTENSIONS=false
+LIST_UNLISTED=false
 CONFIRM_GROUPS=false
 CONFIRM_EACH=false
 
@@ -62,6 +77,10 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --remove)
       REMOVE_EXTENSIONS=true
+      shift
+      ;;
+    --list-unlisted)
+      LIST_UNLISTED=true
       shift
       ;;
     --confirm-groups)
@@ -119,7 +138,7 @@ parse_yaml() {
     [[ -z "$line" || "$line" =~ ^# ]] && continue
 
     # Parse group name (- name: "...")
-    if [[ "$line" =~ ^-[[:space:]]*name:[[:space:]]*[\"\'](.*)[\"\']\$ ]]; then
+    if [[ "$line" =~ ^-[[:space:]]*name:[[:space:]]*[\"\'](.*)[\"\']$ ]]; then
       current_group="${BASH_REMATCH[1]}"
       group_names+=("$current_group")
       group_extensions["$current_group"]=""
@@ -127,7 +146,7 @@ parse_yaml() {
     fi
 
     # Parse extension (- extension.id)
-    if [[ "$line" =~ ^-[[:space:]]*(.+)\$ ]]; then
+    if [[ "$line" =~ ^-[[:space:]]*(.+)$ ]]; then
       local ext="${BASH_REMATCH[1]}"
       if [[ -n "$current_group" ]]; then
         if [[ -z "${group_extensions[$current_group]}" ]]; then
@@ -177,16 +196,39 @@ echo "Allowlist: ${#allowlist[@]} extensions"
 echo "Installed: ${#installed[@]} extensions"
 
 # ---------------------------------------------------------------------------
+# Compute installed extensions that are not on the allowlist
+# ---------------------------------------------------------------------------
+
+unlisted=()
+for ext in "${installed[@]}"; do
+  if [[ -z "${allow[$(canon "$ext")]+x}" ]]; then
+    unlisted+=("$ext")
+  fi
+done
+
+# ---------------------------------------------------------------------------
+# List-only mode: report extensions not on the allowlist, then exit
+# ---------------------------------------------------------------------------
+
+if [[ "$LIST_UNLISTED" == "true" ]]; then
+  echo
+  if ((${#unlisted[@]} > 0)); then
+    echo "${#unlisted[@]} installed extension(s) not in allowlist:"
+    for ext in "${unlisted[@]}"; do
+      echo "  $ext"
+    done
+  else
+    echo "All installed extensions are in the allowlist."
+  fi
+  exit 0
+fi
+
+# ---------------------------------------------------------------------------
 # Uninstall anything not on the allowlist
 # ---------------------------------------------------------------------------
 
 if [[ "$REMOVE_EXTENSIONS" == "true" ]]; then
-  to_remove=()
-  for ext in "${installed[@]}"; do
-    if [[ -z "${allow[$(canon "$ext")]+x}" ]]; then
-      to_remove+=("$ext")
-    fi
-  done
+  to_remove=("${unlisted[@]}")
 
   if ((${#to_remove[@]} > 0)); then
     echo
@@ -258,14 +300,12 @@ if ((${#to_install[@]} > 0)); then
           for ext in "${group_to_install[@]}"; do
             if [[ "$CONFIRM_EACH" == "true" ]]; then
               if confirm "  Install $ext?"; then
-                echo "  → $ext"
-                "$CODE_BIN" --install-extension "$ext" >/dev/null
+                install_extension "$ext" "  "
               else
                 echo "  ⊘ Skipped $ext"
               fi
             else
-              echo "  → $ext"
-              "$CODE_BIN" --install-extension "$ext" >/dev/null
+              install_extension "$ext" "  "
             fi
           done
         else
@@ -286,8 +326,7 @@ if ((${#to_install[@]} > 0)); then
     echo "Installing ${#to_install[@]} missing extension(s) with confirmation:"
     for ext in "${to_install[@]}"; do
       if confirm "Install $ext?"; then
-        echo "→ $ext"
-        "$CODE_BIN" --install-extension "$ext" >/dev/null
+        install_extension "$ext"
       else
         echo "⊘ Skipped $ext"
       fi
@@ -297,8 +336,7 @@ if ((${#to_install[@]} > 0)); then
     # Install all without confirmation
     echo "Installing ${#to_install[@]} missing extension(s):"
     for ext in "${to_install[@]}"; do
-      echo "→ $ext"
-      "$CODE_BIN" --install-extension "$ext" >/dev/null
+      install_extension "$ext"
     done
   fi
 else

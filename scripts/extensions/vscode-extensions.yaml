@@ -4,8 +4,7 @@
 groups:
   - name: "AI assistance"
     extensions:
-      - github.copilot
-      - github.copilot-chat
+      - anthropic.claude-code
       - openai.chatgpt
 
   - name: "API / Data / DB"
@@ -38,6 +37,13 @@ groups:
       - medo64.render-crlf
       - pkief.material-icon-theme
       - usernamehw.errorlens
+
+  - name: "Documentation / Markdown"
+    extensions:
+      - bierner.markdown-mermaid
+      - davidanson.vscode-markdownlint
+      - shd101wyy.markdown-preview-enhanced
+      - tomoki1207.pdf
 
   - name: "Fonts"
     extensions:
@@ -86,13 +92,14 @@ groups:
 
   - name: "Python / Jupyter"
     extensions:
+      - charliermarsh.ruff
+      - ms-python.black-formatter
+      - ms-python.debugpy
       - ms-python.python
       - ms-python.vscode-pylance
-      - ms-python.debugpy
       - ms-python.vscode-python-envs
       - ms-toolsai.jupyter
       - ms-toolsai.jupyter-keymap
       - ms-toolsai.jupyter-renderers
       - ms-toolsai.vscode-jupyter-cell-tags
       - ms-toolsai.vscode-jupyter-slideshow
-      - charliermarsh.ruff

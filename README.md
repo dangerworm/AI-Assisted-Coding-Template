@@ -49,8 +49,9 @@ situation.
    - [requirements.md](/docs/planning/requirements.md)
    - [technologies.md](/docs/planning/technologies.md)
 3. Set `context/MODE.md` to `BUILD` (the default).
-4. Point your AI agent at the repository. It will read `AGENTS.md` and follow
-   the BUILD workflow.
+4. Point your AI agent at the repository. Claude Code users: the BUILD skill
+   loads automatically. Other agents: read
+   `.claude/skills/agents-build/SKILL.md` or tell your agent it is in BUILD mode.
 5. Put your project output in `work`.
 
 ### DISCOVER - generate documentation from existing work
@@ -60,9 +61,12 @@ situation.
 3. Optionally, add any bug reports, user feedback, or known issues to
    `work-existing/feedback/` - this significantly improves output quality.
 4. Set `context/MODE.md` to `DISCOVER`.
-5. Point your AI agent at the repository. It will work through seven discovery
-   phases, reading every file in depth, and produce populated planning documents
-   in `docs/planning/` and behaviour files in `docs/behaviour/`.
+5. Point your AI agent at the repository. Claude Code users: the DISCOVER skill
+   loads automatically. Other agents: read
+   `.claude/skills/agents-discover/SKILL.md` or tell your agent it is in DISCOVER
+   mode. The agent will work through seven discovery phases, reading every file
+   in depth, and produce populated planning documents in `docs/planning/` and
+   behaviour files in `docs/behaviour/`.
 6. Review the output, address any flagged gaps, then switch to `REDESIGN` or
    `BUILD`.
 
@@ -71,9 +75,12 @@ situation.
 1. Ensure planning documents exist in `docs/planning/` (from a DISCOVER run or
    written by hand).
 2. Set `context/MODE.md` to `REDESIGN`.
-3. Point your AI agent at the repository. It will assess the existing design
-   across several areas (data architecture, frontend, API, infrastructure,
-   security, developer experience) and produce concrete, prioritised proposals.
+3. Point your AI agent at the repository. Claude Code users: the REDESIGN skill
+   loads automatically. Other agents: read
+   `.claude/skills/agents-redesign/SKILL.md` or tell your agent it is in REDESIGN
+   mode. The agent will assess the existing design across several areas (data
+   architecture, frontend, API, infrastructure, security, developer experience)
+   and produce concrete, prioritised proposals.
 4. Review each proposal and indicate whether to accept, reject, or defer it.
 5. The agent will revise the planning documents to reflect the agreed target
    state, then switch to `BUILD`.
@@ -173,9 +180,9 @@ I've included two sets of scripts I've used in the past as examples.
 - **Using this repository**
   - [Current mode / switching modes](context/MODE.md)
   - [How AI agents use this repo](/AGENTS.md)
-  - [BUILD mode agent guidance](/AGENTS-BUILD.md)
-  - [REDESIGN mode agent guidance](/AGENTS-REDESIGN.md)
-  - [DISCOVER mode agent guidance](/AGENTS-DISCOVER.md)
+  - [BUILD mode agent guidance](/.claude/skills/agents-build/SKILL.md)
+  - [REDESIGN mode agent guidance](/.claude/skills/agents-redesign/SKILL.md)
+  - [DISCOVER mode agent guidance](/.claude/skills/agents-discover/SKILL.md)
   - [How to contribute](/CONTRIBUTING.md)
 - **Planning documents**
   - [Architecture notes](docs/planning/architecture.md)

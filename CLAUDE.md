@@ -1,27 +1,3 @@
-# Agent Information
-
-## Start here
-
-Check [`context/MODE.md`](context/MODE.md) to determine the current mode.
-
-**Claude Code users:** Mode skills are picked up automatically. Claude will
-check `context/MODE.md` and invoke the relevant skill without being told.
-
-**Other agents:** Point your agent at the skill file for the current mode, or
-tell it which mode is active and ask it to follow those instructions:
-
-| Mode       | Skill file                                                                            | When to use                                                  |
-| ---------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `BUILD`    | [`.claude/skills/agents-build/SKILL.md`](.claude/skills/agents-build/SKILL.md)       | Planning docs exist; build the project                       |
-| `REDESIGN` | [`.claude/skills/agents-redesign/SKILL.md`](.claude/skills/agents-redesign/SKILL.md) | Planning docs exist; propose and agree modernisation changes |
-| `DISCOVER` | [`.claude/skills/agents-discover/SKILL.md`](.claude/skills/agents-discover/SKILL.md) | Existing work is in `work-existing/`; generate planning docs |
-
-## In all modes
-
-Work **with** the human. Discuss changes, ask questions, suggest options, and
-avoid making big decisions unilaterally. When in doubt, ask a question in
-[questions.md](context/user/questions.md).
-
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 

@@ -11,6 +11,9 @@
 .PARAMETER Remove
     Remove extensions not in allowlist
 
+.PARAMETER ListUnlisted
+    List installed extensions not in the allowlist, then exit without making changes
+
 .PARAMETER ConfirmGroups
     Prompt before installing each extension group
 
@@ -33,12 +36,16 @@
 .EXAMPLE
     $env:CODE_BIN = 'code-insiders'
     .\vscode-extensions-master.ps1 -Remove
+
+.EXAMPLE
+    .\vscode-extensions-master.ps1 -ListUnlisted
 #>
 
 [CmdletBinding()]
 # Parameters set to false by default
 param(
     [switch]$Remove,
+    [switch]$ListUnlisted,
     [switch]$ConfirmGroups,
     [switch]$ConfirmEach,
     [string]$CodeBin = $env:CODE_BIN
@@ -134,17 +141,37 @@ Write-Host ""
 Write-Host "Allowlist: $($allowlist.Count) extensions"
 Write-Host "Installed: $($installed.Count) extensions"
 
+# Compute installed extensions that are not on the allowlist
+$unlisted = @()
+foreach ($ext in $installed) {
+    if (-not $allowlistSet.ContainsKey((Get-CanonicalExtensionId $ext))) {
+        $unlisted += $ext
+    }
+}
+
+# ---------------------------------------------------------------------------
+# List-only mode: report extensions not on the allowlist, then exit
+# ---------------------------------------------------------------------------
+
+if ($ListUnlisted) {
+    Write-Host ""
+    if ($unlisted.Count -gt 0) {
+        Write-Host "$($unlisted.Count) installed extension(s) not in allowlist:"
+        foreach ($ext in $unlisted) {
+            Write-Host "  $ext"
+        }
+    } else {
+        Write-Host "All installed extensions are in the allowlist."
+    }
+    exit 0
+}
+
 # ---------------------------------------------------------------------------
 # Uninstall anything not on the allowlist
 # ---------------------------------------------------------------------------
 
 if ($Remove) {
-    $toRemove = @()
-    foreach ($ext in $installed) {
-        if (-not $allowlistSet.ContainsKey((Get-CanonicalExtensionId $ext))) {
-            $toRemove += $ext
-        }
-    }
+    $toRemove = $unlisted
 
     Write-Host ""
     if ($toRemove.Count -gt 0) {

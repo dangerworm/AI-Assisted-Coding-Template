@@ -4,11 +4,11 @@
 
 ## Available modes
 
-| Mode       | Description                                                                                   | Agent file                                  |
-| ---------- | --------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| `BUILD`    | Start from planning documents in `docs/planning/` and build project output in `work/`         | [`AGENTS-BUILD.md`](/AGENTS-BUILD.md)       |
-| `REDESIGN` | Review existing planning documents, propose modernisation changes, revise docs for BUILD      | [`AGENTS-REDESIGN.md`](/AGENTS-REDESIGN.md) |
-| `DISCOVER` | Analyse existing work in `work-existing/` and generate planning documents in `docs/planning/` | [`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md) |
+| Mode       | Description                                                                                   | Skill                                                                       |
+| ---------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `BUILD`    | Start from planning documents in `docs/planning/` and build project output in `work/`         | [agents-build](.claude/skills/agents-build/SKILL.md)                       |
+| `REDESIGN` | Review existing planning documents, propose modernisation changes, revise docs for BUILD      | [agents-redesign](.claude/skills/agents-redesign/SKILL.md)                 |
+| `DISCOVER` | Analyse existing work in `work-existing/` and generate planning documents in `docs/planning/` | [agents-discover](.claude/skills/agents-discover/SKILL.md)                 |
 
 ## Typical pipelines
 
@@ -19,5 +19,6 @@
 
 ## Switching modes
 
-Change the value in line 3 of this file, then follow the corresponding agent
-file.
+Change the value in line 3 of this file. Claude Code will pick up the new mode
+automatically. Other agents: read the corresponding skill file listed above, or
+tell your agent which mode is now active.

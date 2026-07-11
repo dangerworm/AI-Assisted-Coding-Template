@@ -1,21 +1,28 @@
 # Customising the agent files
 
-When you fork this repository, the three mode files
-([`AGENTS-BUILD.md`](/AGENTS-BUILD.md),
-[`AGENTS-REDESIGN.md`](/AGENTS-REDESIGN.md),
-[`AGENTS-DISCOVER.md`](/AGENTS-DISCOVER.md)) contain generic guidance that works
-for most projects out of the box.
+When you fork this repository, the three mode skills contain generic guidance
+that works for most projects out of the box:
 
-For best results, add project-specific context to the relevant mode file -
-particularly `AGENTS-BUILD.md`, which is where the agent will spend most of its
-time. `AGENTS.md` itself should remain a short router; do not add project detail
-there.
+- `.claude/skills/agents-build/SKILL.md`
+- `.claude/skills/agents-redesign/SKILL.md`
+- `.claude/skills/agents-discover/SKILL.md`
+
+**Claude Code users:** Skills are loaded automatically when the relevant mode is
+active. To add project-specific context, edit the relevant skill file directly.
+
+**Other agents:** Point your agent at the skill file for the current mode, or
+tell it which mode is active. The skill files are plain markdown and can be
+read by any agent.
+
+For best results, add project-specific context to the BUILD skill - that is
+where the agent will spend most of its time. `AGENTS.md` itself should remain a
+short router; do not add project detail there.
 
 ---
 
-## What to add to AGENTS-BUILD.md (and why)
+## What to add to the BUILD skill (and why)
 
-Think of additions to AGENTS-BUILD.md as answers to the question: "What would a
+Think of additions to the BUILD skill as answers to the question: "What would a
 new developer need to know on day one that isn't already obvious from the code
 or the planning documents?"
 

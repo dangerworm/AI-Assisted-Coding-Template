@@ -32,9 +32,9 @@ into a particular stack without a clear reason.
 - If you change the workflow (files/paths/structure), update:
   - [README.md](/README.md)
   - [AGENTS.md](/AGENTS.md)
-  - [AGENTS-BUILD.md](/AGENTS-BUILD.md),
-    [AGENTS-DISCOVER.md](/AGENTS-DISCOVER.md),
-    [AGENTS-REDESIGN.md](/AGENTS-REDESIGN.md) as appropriate
+  - the relevant skill file in `.claude/skills/agents-build/`,
+    `.claude/skills/agents-discover/`, or `.claude/skills/agents-redesign/`
+    as appropriate
   - [context/README.md](/context/README.md)
 
 ## Validation
